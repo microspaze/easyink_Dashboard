@@ -417,7 +417,7 @@ export default {
     },
     filterNode(value, data) {
       if (!value) return true;
-      return data.userId && (data.name && data.name.indexOf(value) !== -1);
+      return data.userId && ((data.name && data.name.indexOf(value) !== -1) || (data.mobile && data.mobile.indexOf(value) !== -1) || (data.email && data.email.indexOf(value) !== -1));
     },
     /**
      * 展开某节点
