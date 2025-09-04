@@ -363,11 +363,11 @@ export default {
 .icon-tool-edit, .icon-tool-delete {
   font-size: 14px;
 }
-/deep/ .el-dropdown-menu__item {
+::v-deep .el-dropdown-menu__item {
   padding: 0 8px;
 }
 .customBtn{
-  /deep/.el-button{
+  ::v-deep.el-button{
     font-size: 14px;
   }
 }

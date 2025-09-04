@@ -504,7 +504,7 @@ export default {
 </script>
 <style lang="scss" scoped>
   .dev-info {
-    /deep/ .el-form-item {
+    ::v-deep .el-form-item {
       padding: 0 !important;
     }
   }
@@ -525,20 +525,20 @@ export default {
       right: 130px;
     }
   }
-/deep/ .el-step__head.is-finish {
+::v-deep .el-step__head.is-finish {
   color: #fff;
   border-color: #e0e3ea !important;
 }
-/deep/ .el-step__line-inner {
+::v-deep .el-step__line-inner {
   border-color: #e0e3ea !important;
 }
-/deep/ .el-step__title.is-finish {
+::v-deep .el-step__title.is-finish {
   color: #333 !important;
 }
-/deep/ .el-step__icon {
+::v-deep .el-step__icon {
   background: #e0e3ea;
 }
-/deep/ .el-step__description:first {
+::v-deep .el-step__description:first {
   margin-bottom: 50px;
 }
 .app-container {
@@ -589,7 +589,7 @@ export default {
         width: fit-content;
         margin-bottom: 10px;
         padding-right: 10px;
-        /deep/ .el-form-item__content {
+        ::v-deep .el-form-item__content {
           display: flex;
         }
       }

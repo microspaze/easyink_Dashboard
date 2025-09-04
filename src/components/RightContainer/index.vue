@@ -117,11 +117,11 @@ export default {
       flex: 1;
     }
   }
-  .no-config-info /deep/ .el-alert, .search-form-container /deep/ .el-form {
+  .no-config-info ::v-deep .el-alert, .search-form-container ::v-deep .el-form {
     margin-bottom: 10px;
   }
   .search-form-container {
-    /deep/ .el-form {
+    ::v-deep .el-form {
       background: #fff;
       display: flex;
       flex-wrap: wrap;
@@ -150,10 +150,10 @@ export default {
         bottom: 15px;
       }
     }
-    /deep/ .el-input {
+    ::v-deep .el-input {
       width: 240px;
     }
-    /deep/ .el-button:not(:first-child) {
+    ::v-deep .el-button:not(:first-child) {
       margin-left: 8px!important;
     }
   }
@@ -170,7 +170,7 @@ export default {
         line-height: 32px;
       }
     }
-    .operate-right /deep/ .el-button {
+    .operate-right ::v-deep .el-button {
       margin-bottom: 15px;
       margin-left: 10px;
       &.el-button--default {
@@ -187,7 +187,7 @@ export default {
   }
   .operate-left {
     color: #606266;
-    /deep/ .data-count-num {
+    ::v-deep .data-count-num {
       @include text_btn_color($color-theme2-1);
       padding-left: 5px;
       padding-right: 5px;
@@ -195,28 +195,28 @@ export default {
   }
   .show-data-wrapper {
     background: #fff;
-    /deep/ .el-table__body-wrapper {
+    ::v-deep .el-table__body-wrapper {
       border-left: 1px solid #eee;
       border-right: 1px solid #eee;
     }
-    /deep/ .el-table-column--selection .cell{
+    ::v-deep .el-table-column--selection .cell{
       padding-left: 14px;
     }
-    /deep/ .el-table__cell {
+    ::v-deep .el-table__cell {
       text-align: left!important;
     }
-    /deep/ .el-table__body {
+    ::v-deep .el-table__body {
       .el-table__cell {
         border-bottom-color: #eee!important;
       }
     }
-    /deep/ th{
+    ::v-deep th{
       background: #eee!important;
       border-bottom: 0!important;
     }
   }
   .modal-container {
-    /deep/ .el-form {
+    ::v-deep .el-form {
       padding: 0;
       .el-form-item {
         margin-right: 5px!important;

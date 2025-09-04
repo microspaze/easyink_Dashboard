@@ -609,7 +609,7 @@ export default {
   color: $grayColor;
 }
 .enter-group-detail {
-  /deep/ .show-data-wrapper {
+  ::v-deep .show-data-wrapper {
     padding-top: 0;
   }
 }

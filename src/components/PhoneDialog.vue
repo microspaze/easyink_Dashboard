@@ -340,7 +340,7 @@ export default {
     .msg-li {
       margin-bottom: 10px;
       .msg-img {
-        /deep/ img {
+        ::v-deep img {
           max-width: 120px;
         }
       }
@@ -402,7 +402,7 @@ export default {
 .el-avatar {
   flex: none;
   background: none;
-  /deep/ img {
+  ::v-deep img {
     width: 100%;
   }
 }
@@ -435,7 +435,7 @@ video {
 }
 .msg-item-image {
   width: fit-content;
-  .el-image /deep/ img{
+  .el-image ::v-deep img{
     max-width: 54px;
     max-height: 70px;
   }

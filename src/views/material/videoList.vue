@@ -66,7 +66,7 @@ export default {
 .img-file-name {
   height: 48px;
   position: relative;
-  /deep/ .el-checkbox {
+  ::v-deep .el-checkbox {
     display: flex;
     width: 100%;
     align-items: center;

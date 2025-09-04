@@ -200,15 +200,15 @@ export default {
 </script>
 <style scoped lang='scss'>
 .use-employee-modal {
-    /deep/ .el-dialog__body {
+    ::v-deep .el-dialog__body {
         padding-top: 0;
     }
-    /deep/ .top-search {
+    ::v-deep .top-search {
         margin-bottom: 0;
         padding-top: 0;
         padding-left: 0;
     }
-    /deep/ .show-data-wrapper {
+    ::v-deep .show-data-wrapper {
         padding: 0;
     }
     .user-info {

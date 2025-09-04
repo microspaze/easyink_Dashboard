@@ -210,7 +210,7 @@ export default {
           width: 600px !important;
       }
     }
-    /deep/.el-timeline-item__tail {
+    ::v-deep.el-timeline-item__tail {
       margin-top: 10px;
     }
     .step-dot {
@@ -238,7 +238,7 @@ export default {
   }
 }
 .welcome-textarea {
-  /deep/textarea {
+  ::v-deeptextarea {
     height: 93px !important;
     min-height: 93px !important;
   }

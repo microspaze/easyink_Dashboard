@@ -85,7 +85,7 @@ export default {
   display: flex;
   flex-direction: column;
   height: 100%;
-  /deep/ .content-container {
+  ::v-deep .content-container {
     flex: 1;
     overflow: auto;
     .label-list-page {

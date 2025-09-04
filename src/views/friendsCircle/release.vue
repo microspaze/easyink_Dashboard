@@ -885,7 +885,7 @@ export default {
 <style lang="scss" scoped>
 @import '~@/styles/mixin.scss';
 // 删除从素材库选取之后右上角的绿色成功箭头
-/deep/.el-upload-list__item.is-success .el-upload-list__item-status-label {
+::v-deep.el-upload-list__item.is-success .el-upload-list__item-status-label {
   display: none;
 }
 .group-info {
@@ -934,13 +934,13 @@ export default {
       &:hover {
         background: none;
       }
-      /deep/ .el-form-item__content {
+      ::v-deep .el-form-item__content {
         flex: 1;
         padding-top: 2px;
         margin-top: -3px;
         margin-left: unset!important;;
       }
-      /deep/ textarea {
+      ::v-deep textarea {
         min-height: 96px!important;
         height: 96px!important;
       }
@@ -948,7 +948,7 @@ export default {
   }
   .el-alert {
     margin-top: 15px;
-    /deep/ .el-alert__title{
+    ::v-deep .el-alert__title{
       font-size: 12px;
     }
   }
@@ -960,10 +960,10 @@ export default {
     background-color: #f0f8f7;
     font-size: 12px;
     border: 1px solid #e1f0ee;
-    /deep/ .el-tag__close {
+    ::v-deep .el-tag__close {
       @include text_btn_color($color-theme2-1);
     }
-    /deep/ .el-icon-close:hover {
+    ::v-deep .el-icon-close:hover {
       @include bg_primary_color($color-theme2-1);
       color: #fff;
     }
@@ -973,7 +973,7 @@ export default {
   .el-form-item {
     width: 772px!important;
   }
-  /deep/ .el-form-item__label::before {
+  ::v-deep .el-form-item__label::before {
     content: '*';
     color: #f00;
     padding-right: 3px;
@@ -990,7 +990,7 @@ export default {
   .el-form-item {
     align-items: center;
   }
-  /deep/ .el-form-item__label {
+  ::v-deep .el-form-item__label {
     flex-shrink: 0;
   }
 }
@@ -1049,16 +1049,16 @@ export default {
     flex: 1;
     overflow-y: auto;
   }
-  /deep/ .el-form-item__content {
+  ::v-deep .el-form-item__content {
     max-width: 800px;
   }
 }
 .appendix-box {
-  /deep/ .el-upload-dragger {
+  ::v-deep .el-upload-dragger {
     width: 70px;
     height: 70px;
   }
-  /deep/ .el-upload--picture-card {
+  ::v-deep .el-upload--picture-card {
     width: 70px;
     height: 70px;
     line-height: 70px;
@@ -1077,21 +1077,21 @@ export default {
       padding: 10px;
       width: 580px;
       margin-top: 10px;
-      /deep/ .el-form-item__error {
+      ::v-deep .el-form-item__error {
         position: relative;
       }
-      /deep/ .upload-drag-div {
+      ::v-deep .upload-drag-div {
         width: 340px;
       }
-      /deep/ .el-input, .el-textarea, .upload-drag-div {
+      ::v-deep .el-input, .el-textarea, .upload-drag-div {
         margin-top: 5px;
       }
-      /deep/ .el-input {
+      ::v-deep .el-input {
         input {
           padding: 0 10px;
         }
       }
-      /deep/ .preview-div, .link-preview, /deep/ .appid-preview-div {
+      ::v-deep .preview-div, .link-preview, ::v-deep .appid-preview-div {
           margin-top: 8px;
       }
     }

@@ -492,7 +492,7 @@ export default {
   .add-smart-form {
     background-color: #fff;
     height: calc(100vh - 184px);
-    /deep/ .el-form-item:hover {
+    ::v-deep .el-form-item:hover {
       background: none;
     }
   }

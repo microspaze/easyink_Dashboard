@@ -386,7 +386,7 @@ export default {
 .select-role {
     display: flex;
     flex-direction: column;
-    /deep/ .el-radio {
+    ::v-deep .el-radio {
         display: flex;
         margin-bottom: 15px;
         .el-radio__label {

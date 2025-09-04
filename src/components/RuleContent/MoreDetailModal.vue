@@ -51,7 +51,7 @@ export default {
 </script>
 <style scoped lang='scss'>
 .more-detail-modal {
-    /deep/ .el-dialog__body {
+    ::v-deep .el-dialog__body {
         .preview{
             margin: 0 auto;
         }

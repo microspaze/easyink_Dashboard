@@ -284,7 +284,7 @@ export default {
           color: $orange;
         }
       }
-      /deep/ .el-input,
+      ::v-deep .el-input,
       .upload-div {
         width: 524px;
         margin: 5px;

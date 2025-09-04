@@ -12,6 +12,7 @@ const MSG_DURATION = 2000;
 Vue.use(Element, {
   size: Cookies.get('size') || 'small' // set element-ui default size
 });
+import '@/styles/variables.scss';
 import '@/styles/icon.scss'; // common css
 import '@/styles/common.scss'; // common css
 import '@/styles/index.scss'; // global css

@@ -343,7 +343,7 @@ export default {
   .check-more {
     cursor: pointer;
   }
-  /deep/ .right-container {
+  ::v-deep .right-container {
     flex: 1;
     overflow: auto;
     position: relative;

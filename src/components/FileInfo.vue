@@ -145,7 +145,7 @@ export default {
   display: flex;
   .cover-img {
     margin-right: 5px;
-    /deep/ .el-image {
+    ::v-deep .el-image {
       height: 60px;
       width: 60px;
       svg {

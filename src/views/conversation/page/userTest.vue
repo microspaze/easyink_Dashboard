@@ -568,7 +568,7 @@ export default {
 </script>
 <style lang="scss" scoped>
 @import '~@/styles/mixin.scss';
-  /deep/.el-tabs__nav-scroll {
+  ::v-deep.el-tabs__nav-scroll {
     padding-left: 15px;
   }
 
@@ -591,7 +591,7 @@ export default {
   .employ {
     background: #f6f6f9;
     height: 100%;
-    /deep/ .el-row {
+    ::v-deep .el-row {
       height: 100%;
     }
     .footer-button {
@@ -613,7 +613,7 @@ export default {
       height: calc(100% - 52px);
       .group-tabs {
         height: calc(100% - 52px);
-         /deep/ .el-tabs__content {
+         ::v-deep .el-tabs__content {
           height: calc(100% - 40px);
           .hd-tab-pane {
             height: 100%;
@@ -623,12 +623,12 @@ export default {
           }
         }
       }
-      /deep/ .el-tabs__header {
+      ::v-deep .el-tabs__header {
         margin: 0;
       }
     }
 
-    /deep/ .el-tabs__header {
+    ::v-deep .el-tabs__header {
       margin: 0;
     }
 
@@ -711,7 +711,7 @@ export default {
   }
   .hd_tabthree {
     height: 100%;
-    /deep/ .tabthree-tabs {
+    ::v-deep .tabthree-tabs {
       height: 100%;
       .el-tabs__content {
         height: calc(100% - 40px);

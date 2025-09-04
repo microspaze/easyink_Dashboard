@@ -253,10 +253,10 @@ export default {
 }
 .white-tabs {
   background: #fff;
-  /deep/ .el-tabs__header {
+  ::v-deep .el-tabs__header {
     margin-bottom: 0;
   }
-  /deep/ .el-tabs__nav-wrap::after {
+  ::v-deep .el-tabs__nav-wrap::after {
     height: 0;
   }
   .user-info {
@@ -279,7 +279,7 @@ export default {
     display: flex;
     align-items: center;
   }
-  /deep/ .show-data-wrapper {
+  ::v-deep .show-data-wrapper {
     padding-top: 0;
     overflow: auto;
   }

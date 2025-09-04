@@ -173,7 +173,7 @@ export default {
             margin: 10px 0;
         }
         .upload-template {
-            /deep/ .upload-div {
+            ::v-deep .upload-div {
                 margin-top: 10px;
                 padding-left: 16px;
                 button {

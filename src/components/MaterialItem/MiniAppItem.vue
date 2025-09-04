@@ -145,7 +145,7 @@ export default {
     justify-content: flex-end;
     position: relative;
   }
-  /deep/ .el-image {
+  ::v-deep .el-image {
       img {
         border-radius: 10px;
         max-width: 200px;

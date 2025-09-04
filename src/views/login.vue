@@ -653,7 +653,7 @@ export default {
 .login-code-img {
   height: 38px;
 }
-.login /deep/.el-dialog {
+.login ::v-deep.el-dialog {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -737,7 +737,7 @@ export default {
 }
 .third-btn-area {
   width: 100%;
-  /deep/ .el-button {
+  ::v-deep .el-button {
     margin-left: 0;
     margin-top: 10px;
     font-size: 14px;
@@ -790,16 +790,16 @@ export default {
   color:$baseColor !important;
   border: 1px solid $baseColor;
 }
-/deep/ .el-input__inner:focus{
+::v-deep .el-input__inner:focus{
   border: 1px solid $baseColor;
 }
 
-/deep/ .is-checked >.el-checkbox__inner {
+::v-deep .is-checked >.el-checkbox__inner {
   background-color: $baseColor!important;
   border-color: $baseColor!important;
   box-shadow: -1px 0 0 0 $baseColor!important;
 }
-/deep/ .is-checked >.el-checkbox__label {
+::v-deep .is-checked >.el-checkbox__label {
 color: $baseColor!important;
 }
 .primary-btn {

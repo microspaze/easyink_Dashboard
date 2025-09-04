@@ -1,5 +1,5 @@
 .get-qrcode-drawer {
-    /deep/ .el-tabs__content {
+    ::v-deep .el-tabs__content {
         padding-right: 20px;
     }
     .step-title {

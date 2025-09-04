@@ -126,12 +126,12 @@ export default {
 <style lang="scss" scoped>
   .chat-item-div {
     .msgtype-voice, .msgtype-video {
-      /deep/ img {
+      ::v-deep img {
         cursor: pointer;
       }
     }
     .msgtype-img {
-      /deep/ .thumb {
+      ::v-deep .thumb {
         width: 60px;
         height: 60px;
         cursor: pointer;

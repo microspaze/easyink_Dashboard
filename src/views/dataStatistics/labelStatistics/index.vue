@@ -44,7 +44,7 @@ export default {
   display: flex;
   flex-direction: column;
   overflow: auto;
-  /deep/ .content-container {
+  ::v-deep .content-container {
     flex: 1;
     min-width: 1000px;
     overflow: auto;

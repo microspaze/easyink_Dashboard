@@ -409,7 +409,7 @@ export default {
       width: 300px;
       height: 100%;
       padding: 10px;
-      /deep/ .common-tree-empty{
+      ::v-deep .common-tree-empty{
         height: 100%;
       }
       .custom-tree-node {
@@ -438,10 +438,10 @@ export default {
 .icon-tool-edit, .icon-tool-delete {
   font-size: 14px;
 }
-/deep/ .common-tree-content {
+::v-deep .common-tree-content {
   height: 100%;
 }
-/deep/ .el-tree--highlight-current {
+::v-deep .el-tree--highlight-current {
   height: 100%;
   > .el-tree-node {
     height: 100%;
@@ -452,11 +452,11 @@ export default {
   }
 }
 
-/deep/ .el-dropdown-menu__item {
+::v-deep .el-dropdown-menu__item {
   padding: 0 8px;
 }
 .customBtn {
-  /deep/ .el-button {
+  ::v-deep .el-button {
     font-size: 14px;
   }
 }

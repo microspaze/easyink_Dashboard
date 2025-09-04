@@ -115,11 +115,11 @@ export default {
 </template>
 
 <style lang="scss" scoped>
-/deep/ .el-tabs__item {
+::v-deep .el-tabs__item {
   height: 32px!important;
   line-height: 32px!important;
 }
-/deep/ .el-tabs__nav-wrap::after {
+::v-deep .el-tabs__nav-wrap::after {
   display: none;
 }
 </style>

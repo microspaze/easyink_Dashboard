@@ -554,15 +554,15 @@ export default {
   flex-wrap: wrap;
 }
 .trigger-detail {
-  /deep/ .el-dialog__wrapper {
+  ::v-deep .el-dialog__wrapper {
     display: flex;
     align-items: center;
     justify-content: center;
   }
-  /deep/.el-dialog {
+  ::v-deep.el-dialog {
     width: 800px;
   }
-  /deep/.el-dialog__body {
+  ::v-deep.el-dialog__body {
     padding: 6px 20px;
   }
 

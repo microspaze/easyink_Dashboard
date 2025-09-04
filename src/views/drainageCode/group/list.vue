@@ -494,7 +494,7 @@ export default {
     width: 60px;
     position: absolute;
     margin-top: 3px;
-    /deep/ .el-button--mini{
+    ::v-deep .el-button--mini{
       padding: 3px 0px;
       margin-left: 0;
     }

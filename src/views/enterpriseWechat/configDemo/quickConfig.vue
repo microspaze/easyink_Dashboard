@@ -674,15 +674,15 @@ export default {
 <style lang="scss" scoped>
 @import '~@/styles/mixin.scss';
     .quick-demo {
-        /deep/ .el-step__description {
+        ::v-deep .el-step__description {
             font-size: 14px;
         }
-        /deep/ .el-step__title {
+        ::v-deep .el-step__title {
             padding-bottom: 20px;
             color: $black;
         }
         .quick-div {
-            /deep/ .el-alert--warning {
+            ::v-deep .el-alert--warning {
                 .el-alert__icon {
                     font-size: 20px;
                 }
@@ -702,10 +702,10 @@ export default {
     }
     .step-div {
         margin-top: 20px;
-        /deep/ .el-step.is-vertical .el-step__line {
+        ::v-deep .el-step.is-vertical .el-step__line {
             width: 1px;
         }
-        /deep/ .el-step {
+        ::v-deep .el-step {
             .is-success {
                 .el-step__line {
                     .el-step__line-inner {
@@ -714,7 +714,7 @@ export default {
                 }
             }
         }
-        /deep/ .el-step__line {
+        ::v-deep .el-step__line {
             @include bg_color($color-theme2-1);
         }
         .domain-config {
@@ -756,7 +756,7 @@ export default {
                         border: 1px solid #d9d9d9;
                         border-right: none;
                     }
-                    /deep/ .el-input {
+                    ::v-deep .el-input {
                         input {
                             border-top-left-radius: 0px;
                             border-bottom-left-radius: 0px;
@@ -764,12 +764,12 @@ export default {
                         }
                     }
                     .domain-input {
-                        /deep/ input {
+                        ::v-deep input {
                             width: 210px;
                         }
                     }
                     .domain-textarea {
-                        /deep/ textarea {
+                        ::v-deep textarea {
                           padding:5px 5px;
                           width: 379px;
                           border: 0;
@@ -779,7 +779,7 @@ export default {
                         }
                     }
                     .port-input {
-                        /deep/ input {
+                        ::v-deep input {
                             width: 58px;
                         }
                     }
@@ -862,11 +862,11 @@ export default {
         .secret-config {
             .top-search {
                 margin-bottom: 15px;
-                /deep/ .el-form-item {
+                ::v-deep .el-form-item {
                     padding: 5px 0;
                 }
             }
-            /deep/ .el-form {
+            ::v-deep .el-form {
                 .el-form-item {
                     .el-form-item__content {
                         .el-input {

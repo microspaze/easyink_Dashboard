@@ -1,3 +1,6 @@
+@use "mixin";
+@use "variables";
+
 #app {
   .main-container {
     min-height: 100%;
@@ -12,8 +15,8 @@
 
   .sidebar-container {
     transition: width 0.28s;
-    width: $sideBarWidth !important;
-    background-color: $menuBg;
+    width: variables.$sideBarWidth !important;
+    background-color: variables.$menuBg;
     font-size: 0px;
     bottom: 0;
     z-index: 1001;
@@ -23,7 +26,7 @@
     border-radius: 10px;
 
     .el-menu-item.is-active {
-      @include text_btn_color($color-theme2-2, !important);
+      @include mixin.text_btn_color(variables.$color-theme2-2, !important);
     }
 
     // reset element-ui css
@@ -95,18 +98,18 @@
       display: flex;
       align-items: center;
       &:hover {
-        background-color: $menuHover !important;
+        background-color: variables.$menuHover !important;
       }
     }
 
     .is-active > .el-submenu__title {
-      color: $subMenuActiveText !important;
+      color: variables.$subMenuActiveText !important;
     }
 
     & .nest-menu .el-submenu > .el-submenu__title,
     & .el-menu-item {
       min-width: 94px !important;
-      background-color: $subMenuBg !important;
+      background-color: variables.$subMenuBg !important;
     }
   }
 
@@ -164,7 +167,7 @@
   }
 
   .el-menu--collapse .el-menu .el-submenu {
-    min-width: $sideBarWidth !important;
+    min-width: variables.$sideBarWidth !important;
   }
 
   // mobile responsive
@@ -175,14 +178,14 @@
 
     .sidebar-container {
       transition: transform 0.28s;
-      width: $sideBarWidth !important;
+      width: variables.$sideBarWidth !important;
     }
 
     &.hideSidebar {
       .sidebar-container {
         pointer-events: none;
         transition-duration: 0.3s;
-        transform: translate3d(-$sideBarWidth, 0, 0);
+        transform: translate3d(-(variables.$sideBarWidth), 0, 0);
       }
     }
   }
@@ -207,7 +210,7 @@
   .el-menu-item {
     &:hover {
       // you can use $subMenuHover
-      background-color: $menuHover !important;
+      background-color: variables.$menuHover !important;
     }
   }
 

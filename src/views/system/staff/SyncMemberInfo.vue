@@ -282,19 +282,19 @@ export default {
 <style lang="scss" scoped>
 @import '~@/styles/mixin.scss';
     .quick-demo {
-        /deep/ .el-step__description {
+        ::v-deep .el-step__description {
             font-size: 14px;
             margin-bottom: 15px;
         }
-        /deep/ .el-step__title {
+        ::v-deep .el-step__title {
             padding-bottom: 12px;
             color: $black;
         }
-        /deep/ .el-step__head.is-success {
+        ::v-deep .el-step__head.is-success {
           min-height: 62px;
         }
         .quick-div {
-            /deep/ .el-alert--warning {
+            ::v-deep .el-alert--warning {
                 .el-alert__icon {
                     font-size: 16px;
                 }
@@ -316,10 +316,10 @@ export default {
     }
     .step-div {
         margin-top: 20px;
-        /deep/ .el-step.is-vertical .el-step__line {
+        ::v-deep .el-step.is-vertical .el-step__line {
             width: 1px;
         }
-        /deep/ .el-step {
+        ::v-deep .el-step {
             .is-success {
                 .el-step__line {
                     .el-step__line-inner {
@@ -328,7 +328,7 @@ export default {
                 }
             }
         }
-        /deep/ .el-step__line {
+        ::v-deep .el-step__line {
           display: block;
             @include bg_color($color-theme2-1);
         }

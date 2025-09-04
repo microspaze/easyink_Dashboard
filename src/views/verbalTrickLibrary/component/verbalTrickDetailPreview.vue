@@ -103,12 +103,12 @@ export default {
     margin-bottom: 5px;
     display: flex;
     .cover-img {
-      /deep/ .el-image, video {
+      ::v-deep .el-image, video {
           width: 60px;
           height: 60px;
           object-fit: cover;
       }
-      /deep/ .el-image {
+      ::v-deep .el-image {
         .image-slot {
           height: 100%;
           width: 100%;

@@ -262,7 +262,7 @@ export default {
 @import '~@/styles/mixin.scss';
 .alert-time-edit-item-div {
     .remind-time-radio {
-        /deep/ .el-radio {
+        ::v-deep .el-radio {
           margin-bottom: 10px;
         }
     }

@@ -390,7 +390,7 @@ export default {
     border-top: 1px solid rgba(238, 238, 238, 100);
     padding-top: 10px;
   }
-  /deep/ .upload-div {
+  ::v-deep .upload-div {
     display: flex;
     align-items: flex-end;
     .tip {
@@ -398,7 +398,7 @@ export default {
     }
   }
 }
-/deep/ .image-uploader {
+::v-deep .image-uploader {
   .uploader-icon {
     width: 80px;
     height: 80px;
@@ -494,7 +494,7 @@ export default {
 .base-info-div {
   display: flex;
   .form {
-    /deep/ .el-form-item {
+    ::v-deep .el-form-item {
       padding: 10px 0;
     }
   }

@@ -1,3 +1,5 @@
+@use "variables";
+
 @mixin clearfix {
   &:after {
     content: '';
@@ -63,28 +65,28 @@
   /*背景色（主打色）*/
   background-color: $color;
   [data-theme='theme1'] & {
-    background-color: $color-theme1-1;
+    background-color: variables.$color-theme1-1;
   }
   [data-theme='theme2'] & {
-    background-color: $color-theme2-1;
+    background-color: variables.$color-theme2-1;
   }
   [data-theme='theme3'] & {
-    background-color: $color-theme3-1;
+    background-color: variables.$color-theme3-1;
   }
   [data-theme='theme4'] & {
-    background-color: $color-theme4-1;
+    background-color: variables.$color-theme4-1;
   }
   [data-theme='theme5'] & {
-    background-color: $color-theme5-1;
+    background-color: variables.$color-theme5-1;
   }
   [data-theme='theme6'] & {
-    background-color: $color-theme6-1;
+    background-color: variables.$color-theme6-1;
   }
   [data-theme='theme7'] & {
-    background-color: $color-theme7-1;
+    background-color: variables.$color-theme7-1;
   }
   [data-theme='theme8'] & {
-    background-color: $color-theme8-1;
+    background-color: variables.$color-theme8-1;
   }
 }
 
@@ -92,28 +94,28 @@
   /*背景色*/
   background-color: $color;
   [data-theme='theme1'] & {
-    background-color: $color-theme1-1;
+    background-color: variables.$color-theme1-1;
   }
   [data-theme='theme2'] & {
-    background-color: $color-theme2-1;
+    background-color: variables.$color-theme2-1;
   }
   [data-theme='theme3'] & {
-    background-color: $color-theme3-1;
+    background-color: variables.$color-theme3-1;
   }
   [data-theme='theme4'] & {
-    background-color: $color-theme4-1;
+    background-color: variables.$color-theme4-1;
   }
   [data-theme='theme5'] & {
-    background-color: $color-theme5-1;
+    background-color: variables.$color-theme5-1;
   }
   [data-theme='theme6'] & {
-    background-color: $color-theme6-1;
+    background-color: variables.$color-theme6-1;
   }
   [data-theme='theme7'] & {
-    background-color: $color-theme7-2;
+    background-color: variables.$color-theme7-2;
   }
   [data-theme='theme8'] & {
-    background-color: $color-theme8-2;
+    background-color: variables.$color-theme8-2;
   }
 }
 
@@ -121,36 +123,36 @@
   /*标签背景色*/
   background-color: $color;
   [data-theme='theme1'] & {
-    background-color: $color-theme1-1;
-    color: $color-theme1-1;
+    background-color: variables.$color-theme1-1;
+    color: variables.$color-theme1-1;
   }
   [data-theme='theme2'] & {
-    background-color: $color-theme2-1;
-    color: $color-theme2-1;
+    background-color: variables.$color-theme2-1;
+    color: variables.$color-theme2-1;
   }
   [data-theme='theme3'] & {
-    background-color: $color-theme3-1;
-    color: $color-theme3-1;
+    background-color: variables.$color-theme3-1;
+    color: variables.$color-theme3-1;
   }
   [data-theme='theme4'] & {
-    background-color: $color-theme4-1;
-    color: $color-theme4-1;
+    background-color: variables.$color-theme4-1;
+    color: variables.$color-theme4-1;
   }
   [data-theme='theme5'] & {
-    background-color: $color-theme5-1;
-    color: $color-theme5-1;
+    background-color: variables.$color-theme5-1;
+    color: variables.$color-theme5-1;
   }
   [data-theme='theme6'] & {
-    background-color: $color-theme6-1;
-    color: $color-theme6-1;
+    background-color: variables.$color-theme6-1;
+    color: variables.$color-theme6-1;
   }
   [data-theme='theme7'] & {
-    background-color: $color-theme7-2;
-    color: $color-theme7-2;
+    background-color: variables.$color-theme7-2;
+    color: variables.$color-theme7-2;
   }
   [data-theme='theme7'] & {
-    background-color: $color-theme8-2;
-    color: $color-theme8-2;
+    background-color: variables.$color-theme8-2;
+    color: variables.$color-theme8-2;
   }
 }
 
@@ -159,36 +161,36 @@
   background-color: $color;
   border-color: $color;
   [data-theme='theme1'] & {
-    background-color: $color-theme1-1;
-    border-color: $color-theme1-1;
+    background-color: variables.$color-theme1-1;
+    border-color: variables.$color-theme1-1;
   }
   [data-theme='theme2'] & {
-    background-color: $color-theme2-1;
-    border-color: $color-theme2-1;
+    background-color: variables.$color-theme2-1;
+    border-color: variables.$color-theme2-1;
   }
   [data-theme='theme3'] & {
-    background-color: $color-theme3-1;
-    border-color: $color-theme3-1;
+    background-color: variables.$color-theme3-1;
+    border-color: variables.$color-theme3-1;
   }
   [data-theme='theme4'] & {
-    background-color: $color-theme4-1;
-    border-color: $color-theme4-1;
+    background-color: variables.$color-theme4-1;
+    border-color: variables.$color-theme4-1;
   }
   [data-theme='theme5'] & {
-    background-color: $color-theme5-1;
-    border-color: $color-theme5-1;
+    background-color: variables.$color-theme5-1;
+    border-color: variables.$color-theme5-1;
   }
   [data-theme='theme6'] & {
-    background-color: $color-theme6-1;
-    border-color: $color-theme6-1;
+    background-color: variables.$color-theme6-1;
+    border-color: variables.$color-theme6-1;
   }
   [data-theme='theme7'] & {
-    background-color: $color-theme7-2;
-    border-color: $color-theme7-2;
+    background-color: variables.$color-theme7-2;
+    border-color: variables.$color-theme7-2;
   }
   [data-theme='theme8'] & {
-    background-color: $color-theme8-2;
-    border-color: $color-theme8-2;
+    background-color: variables.$color-theme8-2;
+    border-color: variables.$color-theme8-2;
   }
 }
 
@@ -197,44 +199,44 @@
   background-color: $color;
   border-color: $color;
   [data-theme='theme1'] & {
-    background-color: $color-theme1-1;
-    border-color: $color-theme1-1;
-    box-shadow: -1px 0 0 0 $color-theme1-1;
+    background-color: variables.$color-theme1-1;
+    border-color: variables.$color-theme1-1;
+    box-shadow: -1px 0 0 0 variables.$color-theme1-1;
   }
   [data-theme='theme2'] & {
-    background-color: $color-theme2-1;
-    border-color: $color-theme2-1;
-    box-shadow: -1px 0 0 0 $color-theme2-1;
+    background-color: variables.$color-theme2-1;
+    border-color: variables.$color-theme2-1;
+    box-shadow: -1px 0 0 0 variables.$color-theme2-1;
   }
   [data-theme='theme3'] & {
-    background-color: $color-theme3-1;
-    border-color: $color-theme3-1;
-    box-shadow: -1px 0 0 0 $color-theme3-1;
+    background-color: variables.$color-theme3-1;
+    border-color: variables.$color-theme3-1;
+    box-shadow: -1px 0 0 0 variables.$color-theme3-1;
   }
   [data-theme='theme4'] & {
-    background-color: $color-theme4-1;
-    border-color: $color-theme4-1;
-    box-shadow: -1px 0 0 0 $color-theme4-1;
+    background-color: variables.$color-theme4-1;
+    border-color: variables.$color-theme4-1;
+    box-shadow: -1px 0 0 0 variables.$color-theme4-1;
   }
   [data-theme='theme5'] & {
-    background-color: $color-theme5-1;
-    border-color: $color-theme5-1;
-    box-shadow: -1px 0 0 0 $color-theme5-1;
+    background-color: variables.$color-theme5-1;
+    border-color: variables.$color-theme5-1;
+    box-shadow: -1px 0 0 0 variables.$color-theme5-1;
   }
   [data-theme='theme6'] & {
-    background-color: $color-theme6-1;
-    border-color: $color-theme6-1;
-    box-shadow: -1px 0 0 0 $color-theme6-1;
+    background-color: variables.$color-theme6-1;
+    border-color: variables.$color-theme6-1;
+    box-shadow: -1px 0 0 0 variables.$color-theme6-1;
   }
   [data-theme='theme7'] & {
-    background-color: $color-theme7-2;
-    border-color: $color-theme7-2;
-    box-shadow: -1px 0 0 0 $color-theme7-2;
+    background-color: variables.$color-theme7-2;
+    border-color: variables.$color-theme7-2;
+    box-shadow: -1px 0 0 0 variables.$color-theme7-2;
   }
   [data-theme='theme8'] & {
-    background-color: $color-theme8-2;
-    border-color: $color-theme8-2;
-    box-shadow: -1px 0 0 0 $color-theme8-2;
+    background-color: variables.$color-theme8-2;
+    border-color: variables.$color-theme8-2;
+    box-shadow: -1px 0 0 0 variables.$color-theme8-2;
   }
 }
 
@@ -242,28 +244,28 @@
   /*单选框文字颜色*/
   color: $color;
   [data-theme='theme1'] & {
-    color: $color-theme1-1;
+    color: variables.$color-theme1-1;
   }
   [data-theme='theme2'] & {
-    color: $color-theme2-1;
+    color: variables.$color-theme2-1;
   }
   [data-theme='theme3'] & {
-    color: $color-theme3-1;
+    color: variables.$color-theme3-1;
   }
   [data-theme='theme4'] & {
-    color: $color-theme4-1;
+    color: variables.$color-theme4-1;
   }
   [data-theme='theme5'] & {
-    color: $color-theme5-1;
+    color: variables.$color-theme5-1;
   }
   [data-theme='theme6'] & {
-    color: $color-theme6-1;
+    color: variables.$color-theme6-1;
   }
   [data-theme='theme7'] & {
-    color: $color-theme7-2;
+    color: variables.$color-theme7-2;
   }
   [data-theme='theme8'] & {
-    color: $color-theme8-2;
+    color: variables.$color-theme8-2;
   }
 }
 
@@ -272,67 +274,67 @@
   color: $color;
   border-color: $color;
   [data-theme='theme1'] & {
-    color: $color-theme1-1;
-    border-color: $color-theme1-1;
+    color: variables.$color-theme1-1;
+    border-color: variables.$color-theme1-1;
     background-color: #fff;
     &:hover {
-      background-color: $color-theme1-4;
+      background-color: variables.$color-theme1-4;
     }
   }
   [data-theme='theme2'] & {
-    color: $color-theme2-1;
-    border-color: $color-theme2-1;
+    color: variables.$color-theme2-1;
+    border-color: variables.$color-theme2-1;
     background-color: #fff;
     &:hover {
-      background-color: $color-theme2-4;
+      background-color: variables.$color-theme2-4;
     }
   }
   [data-theme='theme3'] & {
-    color: $color-theme3-1;
-    border-color: $color-theme3-1;
+    color: variables.$color-theme3-1;
+    border-color: variables.$color-theme3-1;
     background-color: #fff;
     &:hover {
-      background-color: $color-theme3-4;
+      background-color: variables.$color-theme3-4;
     }
   }
   [data-theme='theme4'] & {
-    color: $color-theme4-1;
-    border-color: $color-theme4-1;
+    color: variables.$color-theme4-1;
+    border-color: variables.$color-theme4-1;
     background-color: #fff;
     &:hover {
-      background-color: $color-theme4-3;
+      background-color: variables.$color-theme4-3;
     }
   }
   [data-theme='theme5'] & {
-    color: $color-theme5-1;
-    border-color: $color-theme5-1;
+    color: variables.$color-theme5-1;
+    border-color: variables.$color-theme5-1;
     background-color: #fff;
     &:hover {
-      background-color: $color-theme5-3;
+      background-color: variables.$color-theme5-3;
     }
   }
   [data-theme='theme6'] & {
-    color: $color-theme6-1;
-    border-color: $color-theme6-1;
+    color: variables.$color-theme6-1;
+    border-color: variables.$color-theme6-1;
     background-color: #fff;
     &:hover {
-      background-color: $color-theme6-3;
+      background-color: variables.$color-theme6-3;
     }
   }
   [data-theme='theme7'] & {
-    color: $color-theme7-2;
-    border-color: $color-theme7-2;
+    color: variables.$color-theme7-2;
+    border-color: variables.$color-theme7-2;
     background-color: #fff;
     &:hover {
-      background-color: $color-theme7-4;
+      background-color: variables.$color-theme7-4;
     }
   }
   [data-theme='theme8'] & {
-    color: $color-theme8-2;
-    border-color: $color-theme8-2;
+    color: variables.$color-theme8-2;
+    border-color: variables.$color-theme8-2;
     background-color: #fff;
     &:hover {
-      background-color: $color-theme8-4;
+      background-color: variables.$color-theme8-4;
     }
   }
 }
@@ -341,172 +343,172 @@
   /*边框样式*/
   [data-theme='theme1'] & {
     @if $direction == top {
-      border-top: $width $style $color-theme1-1;
+      border-top: $width $style variables.$color-theme1-1;
     } @else if $direction == right {
-      border-right: $width $style $color-theme1-1;
+      border-right: $width $style variables.$color-theme1-1;
     } @else if $direction == bottom {
-      border-bottom: $width $style $color-theme1-1;
+      border-bottom: $width $style variables.$color-theme1-1;
     } @else if $direction == left {
-      border-left: $width $style $color-theme1-1;
+      border-left: $width $style variables.$color-theme1-1;
     } @else {
-      border: $width $style $color-theme1-1;
+      border: $width $style variables.$color-theme1-1;
     }
   }
   [data-theme='theme2'] & {
     @if $direction == top {
-      border-top: $width $style $color-theme2-1;
+      border-top: $width $style variables.$color-theme2-1;
     } @else if $direction == right {
-      border-right: $width $style $color-theme2-1;
+      border-right: $width $style variables.$color-theme2-1;
     } @else if $direction == bottom {
-      border-bottom: $width $style $color-theme2-1;
+      border-bottom: $width $style variables.$color-theme2-1;
     } @else if $direction == left {
-      border-left: $width $style $color-theme2-1;
+      border-left: $width $style variables.$color-theme2-1;
     } @else {
-      border: $width $style $color-theme2-1;
+      border: $width $style variables.$color-theme2-1;
     }
   }
   [data-theme='theme3'] & {
     @if $direction == top {
-      border-top: $width $style $color-theme3-1;
+      border-top: $width $style variables.$color-theme3-1;
     } @else if $direction == right {
-      border-right: $width $style $color-theme3-1;
+      border-right: $width $style variables.$color-theme3-1;
     } @else if $direction == bottom {
-      border-bottom: $width $style $color-theme3-1;
+      border-bottom: $width $style variables.$color-theme3-1;
     } @else if $direction == left {
-      border-left: $width $style $color-theme3-1;
+      border-left: $width $style variables.$color-theme3-1;
     } @else {
-      border: $width $style $color-theme3-1;
+      border: $width $style variables.$color-theme3-1;
     }
   }
   [data-theme='theme4'] & {
     @if $direction == top {
-      border-top: $width $style $color-theme4-1;
+      border-top: $width $style variables.$color-theme4-1;
     } @else if $direction == right {
-      border-right: $width $style $color-theme4-1;
+      border-right: $width $style variables.$color-theme4-1;
     } @else if $direction == bottom {
-      border-bottom: $width $style $color-theme4-1;
+      border-bottom: $width $style variables.$color-theme4-1;
     } @else if $direction == left {
-      border-left: $width $style $color-theme4-1;
+      border-left: $width $style variables.$color-theme4-1;
     } @else {
-      border: $width $style $color-theme4-1;
+      border: $width $style variables.$color-theme4-1;
     }
   }
   [data-theme='theme5'] & {
     @if $direction == top {
-      border-top: $width $style $color-theme5-1;
+      border-top: $width $style variables.$color-theme5-1;
     } @else if $direction == right {
-      border-right: $width $style $color-theme5-1;
+      border-right: $width $style variables.$color-theme5-1;
     } @else if $direction == bottom {
-      border-bottom: $width $style $color-theme5-1;
+      border-bottom: $width $style variables.$color-theme5-1;
     } @else if $direction == left {
-      border-left: $width $style $color-theme5-1;
+      border-left: $width $style variables.$color-theme5-1;
     } @else {
-      border: $width $style $color-theme5-1;
+      border: $width $style variables.$color-theme5-1;
     }
   }
   [data-theme='theme6'] & {
     @if $direction == top {
-      border-top: $width $style $color-theme6-1;
+      border-top: $width $style variables.$color-theme6-1;
     } @else if $direction == right {
-      border-right: $width $style $color-theme6-1;
+      border-right: $width $style variables.$color-theme6-1;
     } @else if $direction == bottom {
-      border-bottom: $width $style $color-theme6-1;
+      border-bottom: $width $style variables.$color-theme6-1;
     } @else if $direction == left {
-      border-left: $width $style $color-theme6-1;
+      border-left: $width $style variables.$color-theme6-1;
     } @else {
-      border: $width $style $color-theme6-1;
+      border: $width $style variables.$color-theme6-1;
     }
   }
   [data-theme='theme7'] & {
     @if $direction == top {
-      border-top: $width $style $color-theme7-2;
+      border-top: $width $style variables.$color-theme7-2;
     } @else if $direction == right {
-      border-right: $width $style $color-theme7-2;
+      border-right: $width $style variables.$color-theme7-2;
     } @else if $direction == bottom {
-      border-bottom: $width $style $color-theme7-2;
+      border-bottom: $width $style variables.$color-theme7-2;
     } @else if $direction == left {
-      border-left: $width $style $color-theme7-2;
+      border-left: $width $style variables.$color-theme7-2;
     } @else {
-      border: $width $style $color-theme7-2;
+      border: $width $style variables.$color-theme7-2;
     }
   }
   [data-theme='theme8'] & {
     @if $direction == top {
-      border-top: $width $style $color-theme8-2;
+      border-top: $width $style variables.$color-theme8-2;
     } @else if $direction == right {
-      border-right: $width $style $color-theme8-2;
+      border-right: $width $style variables.$color-theme8-2;
     } @else if $direction == bottom {
-      border-bottom: $width $style $color-theme8-2;
+      border-bottom: $width $style variables.$color-theme8-2;
     } @else if $direction == left {
-      border-left: $width $style $color-theme8-2;
+      border-left: $width $style variables.$color-theme8-2;
     } @else {
-      border: $width $style $color-theme8-2;
+      border: $width $style variables.$color-theme8-2;
     }
   }
 }
 @mixin border_color($important: false) {
   /*边框颜色*/
-  border-color: $color-theme2-1;
+  border-color: variables.$color-theme2-1;
   [data-theme='theme1'] & {
     @if $important {
-      border-color: $color-theme1-1 !important;
+      border-color: variables.$color-theme1-1 !important;
     } @else {
-      border-color: $color-theme1-1;
+      border-color: variables.$color-theme1-1;
     }
   }
   [data-theme='theme2'] & {
     @if $important {
-      border-color: $color-theme2-1 !important;
+      border-color: variables.$color-theme2-1 !important;
     } @else {
-      border-color: $color-theme2-1;
+      border-color: variables.$color-theme2-1;
     }
   }
   [data-theme='theme3'] & {
     @if $important {
-      border-color: $color-theme3-1 !important;
+      border-color: variables.$color-theme3-1 !important;
     } @else {
-      border-color: $color-theme3-1;
+      border-color: variables.$color-theme3-1;
     }
   }
   [data-theme='theme4'] & {
     @if $important {
-      border-color: $color-theme4-1 !important;
+      border-color: variables.$color-theme4-1 !important;
     } @else {
-      border-color: $color-theme4-1;
+      border-color: variables.$color-theme4-1;
     }
   }
   [data-theme='theme5'] & {
     @if $important {
-      border-color: $color-theme5-1 !important;
+      border-color: variables.$color-theme5-1 !important;
     } @else {
-      border-color: $color-theme5-1;
+      border-color: variables.$color-theme5-1;
     }
   }
   [data-theme='theme6'] & {
     @if $important {
-      border-color: $color-theme6-1 !important;
+      border-color: variables.$color-theme6-1 !important;
     } @else {
-      border-color: $color-theme6-1;
+      border-color: variables.$color-theme6-1;
     }
   }
   [data-theme='theme7'] & {
     @if $important {
-      border-color: $color-theme7-2 !important;
+      border-color: variables.$color-theme7-2 !important;
     } @else {
-      border-color: $color-theme7-2;
+      border-color: variables.$color-theme7-2;
     }
   }
   [data-theme='theme8'] & {
     @if $important {
-      border-color: $color-theme8-2 !important;
+      border-color: variables.$color-theme8-2 !important;
     } @else {
-      border-color: $color-theme8-2;
+      border-color: variables.$color-theme8-2;
     }
   }
 }
 
 @mixin box_shadow_color(
-  $color: $color-theme2-1,
+  $color: variables.$color-theme2-1,
   $inset: 0,
   $offset: 0,
   $blurRadius: 0,
@@ -515,105 +517,105 @@
   /*阴影颜色*/
   box-shadow: $color;
   [data-theme='theme1'] & {
-    box-shadow: $inset, $offset, $blurRadius, $spreadRadius, $color-theme1-1;
+    box-shadow: $inset, $offset, $blurRadius, $spreadRadius, variables.$color-theme1-1;
   }
   [data-theme='theme2'] & {
-    box-shadow: $inset, $offset, $blurRadius, $spreadRadius, $color-theme2-1;
+    box-shadow: $inset, $offset, $blurRadius, $spreadRadius, variables.$color-theme2-1;
   }
   [data-theme='theme3'] & {
-    box-shadow: $inset, $offset, $blurRadius, $spreadRadius, $color-theme3-1;
+    box-shadow: $inset, $offset, $blurRadius, $spreadRadius, variables.$color-theme3-1;
   }
   [data-theme='theme4'] & {
-    box-shadow: $inset, $offset, $blurRadius, $spreadRadius, $color-theme4-1;
+    box-shadow: $inset, $offset, $blurRadius, $spreadRadius, variables.$color-theme4-1;
   }
   [data-theme='theme5'] & {
-    box-shadow: $inset, $offset, $blurRadius, $spreadRadius, $color-theme5-1;
+    box-shadow: $inset, $offset, $blurRadius, $spreadRadius, variables.$color-theme5-1;
   }
   [data-theme='theme6'] & {
-    box-shadow: $inset, $offset, $blurRadius, $spreadRadius, $color-theme6-1;
+    box-shadow: $inset, $offset, $blurRadius, $spreadRadius, variables.$color-theme6-1;
   }
   [data-theme='theme7'] & {
-    box-shadow: $inset, $offset, $blurRadius, $spreadRadius, $color-theme7-1;
+    box-shadow: $inset, $offset, $blurRadius, $spreadRadius, variables.$color-theme7-1;
   }
   [data-theme='theme7'] & {
-    box-shadow: $inset, $offset, $blurRadius, $spreadRadius, $color-theme8-1;
+    box-shadow: $inset, $offset, $blurRadius, $spreadRadius, variables.$color-theme8-1;
   }
 }
 
-@mixin text_btn_color($color: $color-theme1-2, $important: false) {
+@mixin text_btn_color($color: variables.$color-theme1-2, $important: false) {
   /*文字颜色*/
   color: $color;
   stroke: $color;
   [data-theme='theme1'] & {
     @if $important {
-      color: $color-theme1-2 !important;
-      stroke: $color-theme1-2 !important;
+      color: variables.$color-theme1-2 !important;
+      stroke: variables.$color-theme1-2 !important;
     } @else {
-      color: $color-theme1-2;
-      stroke: $color-theme1-2;
+      color: variables.$color-theme1-2;
+      stroke: variables.$color-theme1-2;
     }
   }
   [data-theme='theme2'] & {
     @if $important {
-      color: $color-theme2-2 !important;
-      stroke: $color-theme2-2 !important;
+      color: variables.$color-theme2-2 !important;
+      stroke: variables.$color-theme2-2 !important;
     } @else {
-      color: $color-theme2-2;
-      stroke: $color-theme2-2;
+      color: variables.$color-theme2-2;
+      stroke: variables.$color-theme2-2;
     }
   }
   [data-theme='theme3'] & {
     @if $important {
-      color: $color-theme3-2 !important;
-      stroke: $color-theme3-2 !important;
+      color: variables.$color-theme3-2 !important;
+      stroke: variables.$color-theme3-2 !important;
     } @else {
-      color: $color-theme3-2;
-      stroke: $color-theme3-2;
+      color: variables.$color-theme3-2;
+      stroke: variables.$color-theme3-2;
     }
   }
   [data-theme='theme4'] & {
     @if $important {
-      color: $color-theme4-1 !important;
-      stroke: $color-theme4-1 !important;
+      color: variables.$color-theme4-1 !important;
+      stroke: variables.$color-theme4-1 !important;
     } @else {
-      color: $color-theme4-1;
-      stroke: $color-theme4-1;
+      color: variables.$color-theme4-1;
+      stroke: variables.$color-theme4-1;
     }
   }
   [data-theme='theme5'] & {
     @if $important {
-      color: $color-theme5-1 !important;
-      stroke: $color-theme5-1 !important;
+      color: variables.$color-theme5-1 !important;
+      stroke: variables.$color-theme5-1 !important;
     } @else {
-      color: $color-theme5-1;
-      stroke: $color-theme5-1;
+      color: variables.$color-theme5-1;
+      stroke: variables.$color-theme5-1;
     }
   }
   [data-theme='theme6'] & {
     @if $important {
-      color: $color-theme6-1 !important;
-      stroke: $color-theme6-1 !important;
+      color: variables.$color-theme6-1 !important;
+      stroke: variables.$color-theme6-1 !important;
     } @else {
-      color: $color-theme6-1;
-      stroke: $color-theme6-1;
+      color: variables.$color-theme6-1;
+      stroke: variables.$color-theme6-1;
     }
   }
   [data-theme='theme7'] & {
     @if $important {
-      color: $color-theme7-2 !important;
-      stroke: $color-theme7-2 !important;
+      color: variables.$color-theme7-2 !important;
+      stroke: variables.$color-theme7-2 !important;
     } @else {
-      color: $color-theme7-2;
-      stroke: $color-theme7-2;
+      color: variables.$color-theme7-2;
+      stroke: variables.$color-theme7-2;
     }
   }
   [data-theme='theme8'] & {
     @if $important {
-      color: $color-theme8-2 !important;
-      stroke: $color-theme8-2 !important;
+      color: variables.$color-theme8-2 !important;
+      stroke: variables.$color-theme8-2 !important;
     } @else {
-      color: $color-theme8-2;
-      stroke: $color-theme8-2;
+      color: variables.$color-theme8-2;
+      stroke: variables.$color-theme8-2;
     }
   }
 }
@@ -623,44 +625,44 @@
   color: $color;
   border-color: $color;
   [data-theme='theme1'] & {
-    color: $color-theme1-1;
-    border-color: $color-theme1-1;
-    background-color: $color-theme1-4;
+    color: variables.$color-theme1-1;
+    border-color: variables.$color-theme1-1;
+    background-color: variables.$color-theme1-4;
   }
   [data-theme='theme2'] & {
-    color: $color-theme2-1;
-    border-color: $color-theme2-1;
-    background-color: $color-theme2-4;
+    color: variables.$color-theme2-1;
+    border-color: variables.$color-theme2-1;
+    background-color: variables.$color-theme2-4;
   }
   [data-theme='theme3'] & {
-    color: $color-theme3-1;
-    border-color: $color-theme3-1;
-    background-color: $color-theme3-4;
+    color: variables.$color-theme3-1;
+    border-color: variables.$color-theme3-1;
+    background-color: variables.$color-theme3-4;
   }
   [data-theme='theme4'] & {
-    color: $color-theme4-1;
-    border-color: $color-theme4-1;
-    background-color: $color-theme4-3;
+    color: variables.$color-theme4-1;
+    border-color: variables.$color-theme4-1;
+    background-color: variables.$color-theme4-3;
   }
   [data-theme='theme5'] & {
-    color: $color-theme5-1;
-    border-color: $color-theme5-1;
-    background-color: $color-theme5-3;
+    color: variables.$color-theme5-1;
+    border-color: variables.$color-theme5-1;
+    background-color: variables.$color-theme5-3;
   }
   [data-theme='theme6'] & {
-    color: $color-theme6-1;
-    border-color: $color-theme6-1;
-    background-color: $color-theme6-3;
+    color: variables.$color-theme6-1;
+    border-color: variables.$color-theme6-1;
+    background-color: variables.$color-theme6-3;
   }
   [data-theme='theme7'] & {
-    color: $color-theme7-2;
-    border-color: $color-theme7-2;
-    background-color: $color-theme7-4;
+    color: variables.$color-theme7-2;
+    border-color: variables.$color-theme7-2;
+    background-color: variables.$color-theme7-4;
   }
   [data-theme='theme8'] & {
-    color: $color-theme8-2;
-    border-color: $color-theme8-2;
-    background-color: $color-theme8-4;
+    color: variables.$color-theme8-2;
+    border-color: variables.$color-theme8-2;
+    background-color: variables.$color-theme8-4;
   }
 }
 
@@ -669,43 +671,43 @@
   color: $color;
   border-color: $color;
   [data-theme='theme1'] & {
-    color: $color-theme1-1;
-    border-color: $color-theme1-3;
+    color: variables.$color-theme1-1;
+    border-color: variables.$color-theme1-3;
     background-color: #fff;
   }
   [data-theme='theme2'] & {
-    color: $color-theme2-1;
-    border-color: $color-theme2-3;
+    color: variables.$color-theme2-1;
+    border-color: variables.$color-theme2-3;
     background-color: #fff;
   }
   [data-theme='theme3'] & {
-    color: $color-theme3-1;
-    border-color: $color-theme3-3;
+    color: variables.$color-theme3-1;
+    border-color: variables.$color-theme3-3;
     background-color: #fff;
   }
   [data-theme='theme4'] & {
-    color: $color-theme4-1;
-    border-color: $color-theme4-2;
+    color: variables.$color-theme4-1;
+    border-color: variables.$color-theme4-2;
     background-color: #fff;
   }
   [data-theme='theme5'] & {
-    color: $color-theme5-1;
-    border-color: $color-theme5-2;
+    color: variables.$color-theme5-1;
+    border-color: variables.$color-theme5-2;
     background-color: #fff;
   }
   [data-theme='theme6'] & {
-    color: $color-theme6-1;
-    border-color: $color-theme6-2;
+    color: variables.$color-theme6-1;
+    border-color: variables.$color-theme6-2;
     background-color: #fff;
   }
   [data-theme='theme7'] & {
-    color: $color-theme7-2;
-    border-color: $color-theme7-3;
+    color: variables.$color-theme7-2;
+    border-color: variables.$color-theme7-3;
     background-color: #fff;
   }
   [data-theme='theme8'] & {
-    color: $color-theme8-2;
-    border-color: $color-theme8-3;
+    color: variables.$color-theme8-2;
+    border-color: variables.$color-theme8-3;
     background-color: #fff;
   }
 }
@@ -715,36 +717,36 @@
   color: $color;
   background-color: $backgroundColor;
   [data-theme='theme1'] & {
-    color: $color-theme1-1;
-    background-color: $color-theme1-3;
+    color: variables.$color-theme1-1;
+    background-color: variables.$color-theme1-3;
   }
   [data-theme='theme2'] & {
-    color: $color-theme2-1;
-    background-color: $color-theme2-3;
+    color: variables.$color-theme2-1;
+    background-color: variables.$color-theme2-3;
   }
   [data-theme='theme3'] & {
-    color: $color-theme3-1;
-    background-color: $color-theme3-3;
+    color: variables.$color-theme3-1;
+    background-color: variables.$color-theme3-3;
   }
   [data-theme='theme4'] & {
-    color: $color-theme4-1;
-    background-color: $color-theme4-2;
+    color: variables.$color-theme4-1;
+    background-color: variables.$color-theme4-2;
   }
   [data-theme='theme5'] & {
-    color: $color-theme5-1;
-    background-color: $color-theme5-2;
+    color: variables.$color-theme5-1;
+    background-color: variables.$color-theme5-2;
   }
   [data-theme='theme6'] & {
-    color: $color-theme6-1;
-    background-color: $color-theme6-2;
+    color: variables.$color-theme6-1;
+    background-color: variables.$color-theme6-2;
   }
   [data-theme='theme7'] & {
-    color: $color-theme7-2;
-    background-color: $color-theme7-3;
+    color: variables.$color-theme7-2;
+    background-color: variables.$color-theme7-3;
   }
   [data-theme='theme8'] & {
-    color: $color-theme8-2;
-    background-color: $color-theme8-3;
+    color: variables.$color-theme8-2;
+    background-color: variables.$color-theme8-3;
   }
 }
 
@@ -752,28 +754,28 @@
   /*列表移入*/
   background-color: $backgroundColor;
   [data-theme='theme1'] & {
-    background-color: $color-theme1-4;
+    background-color: variables.$color-theme1-4;
   }
   [data-theme='theme2'] & {
-    background-color: $color-theme2-4;
+    background-color: variables.$color-theme2-4;
   }
   [data-theme='theme3'] & {
-    background-color: $color-theme3-4;
+    background-color: variables.$color-theme3-4;
   }
   [data-theme='theme4'] & {
-    background-color: $color-theme4-3;
+    background-color: variables.$color-theme4-3;
   }
   [data-theme='theme5'] & {
-    background-color: $color-theme5-3;
+    background-color: variables.$color-theme5-3;
   }
   [data-theme='theme6'] & {
-    background-color: $color-theme6-3;
+    background-color: variables.$color-theme6-3;
   }
   [data-theme='theme7'] & {
-    background-color: $color-theme7-4;
+    background-color: variables.$color-theme7-4;
   }
   [data-theme='theme8'] & {
-    background-color: $color-theme8-4;
+    background-color: variables.$color-theme8-4;
   }
 }
 
@@ -781,27 +783,27 @@
   /*步骤条*/
   color: $color;
   [data-theme='theme1'] & {
-    color: $color-theme1-1;
+    color: variables.$color-theme1-1;
   }
   [data-theme='theme2'] & {
-    color: $color-theme2-1;
+    color: variables.$color-theme2-1;
   }
   [data-theme='theme3'] & {
-    color: $color-theme3-1;
+    color: variables.$color-theme3-1;
   }
   [data-theme='theme4'] & {
-    color: $color-theme4-1;
+    color: variables.$color-theme4-1;
   }
   [data-theme='theme5'] & {
-    color: $color-theme5-1;
+    color: variables.$color-theme5-1;
   }
   [data-theme='theme6'] & {
-    color: $color-theme6-1;
+    color: variables.$color-theme6-1;
   }
   [data-theme='theme7'] & {
-    color: $color-theme7-2;
+    color: variables.$color-theme7-2;
   }
   [data-theme='theme8'] & {
-    color: $color-theme8-2;
+    color: variables.$color-theme8-2;
   }
 }

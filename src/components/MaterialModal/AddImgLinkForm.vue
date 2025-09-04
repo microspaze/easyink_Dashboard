@@ -141,7 +141,7 @@ export default {
 
 <style lang="scss" scoped>
 .miniapp-material {
-  /deep/ .upload-div {
+  ::v-deep .upload-div {
     display: flex;
     align-items: flex-end;
     .tip {

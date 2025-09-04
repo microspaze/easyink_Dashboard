@@ -133,23 +133,23 @@ export default {
 
 <style  lang="scss" scoped>
 .form-setting {
-  /deep/ .el-form-item__label {
+  ::v-deep .el-form-item__label {
     width: 100%;
   }
-  /deep/ .el-input__count {
+  ::v-deep .el-input__count {
       height: 20px;
       line-height: 20px;
   }
-  /deep/ .el-form-item  {
+  ::v-deep .el-form-item  {
     border-bottom: 1px solid #eee;
     .el-form-item__label {
       padding: 0;
     }
   }
-  /deep/ .el-form-item:hover  {
+  ::v-deep .el-form-item:hover  {
     background: none;
   }
-  /deep/ .el-color-picker__trigger {
+  ::v-deep .el-color-picker__trigger {
     width: 50px;
     height: 50px;
   }

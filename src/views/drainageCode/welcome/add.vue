@@ -573,7 +573,7 @@ export default {
 </template>
 <style lang="scss" src="@/styles/communicate.scss" scoped></style>
 <style lang="scss" scoped>
-/deep/ .el-form-item:hover  {
+::v-deep .el-form-item:hover  {
   background: none;
 }
 .add-welcome-page {
@@ -587,7 +587,7 @@ export default {
       margin-left: 18px;
       margin-top: 15px;
       width: 542px;
-      /deep/ .el-alert__description {
+      ::v-deep .el-alert__description {
         line-height: 20px;
       }
     }
@@ -597,7 +597,7 @@ export default {
     }
     .step-div {
       width: 710px;
-      /deep/ .el-steps {
+      ::v-deep .el-steps {
         .el-step__main {
           .el-step__title {
             display: none;
@@ -625,7 +625,7 @@ export default {
         flex-wrap: wrap;
         .el-select {
           margin-bottom: 10px;
-          /deep/ .el-input__inner{
+          ::v-deep .el-input__inner{
             padding-left: 10px
           }
         }
@@ -655,7 +655,7 @@ export default {
     margin-right: 156px;
     padding-top: 0;
   }
-  /deep/ .quick-actions {
+  ::v-deep .quick-actions {
     border-radius: 0 0 4px 4px;
     border: 1px solid #dcdfe6;
     border-top: 0;

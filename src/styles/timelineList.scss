@@ -12,7 +12,7 @@
       line-height: 18px;
     }
     .timeline-div {
-      /deep/ .el-timeline-item__timestamp {
+      ::v-deep .el-timeline-item__timestamp {
         display: none;
       }
       .custom-timestamp {

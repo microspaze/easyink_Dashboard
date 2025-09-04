@@ -127,7 +127,7 @@ export default {
   width: 122px;
   display: flex;
   flex-wrap: wrap;
-  height: calc(100%/3)-10px;
+  height: calc(100%/3 - 10px);
 }
 .img {
   width: 40px;

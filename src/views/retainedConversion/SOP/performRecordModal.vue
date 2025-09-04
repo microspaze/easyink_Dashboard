@@ -398,13 +398,13 @@ export default {
 </script>
 <style scoped lang='scss'>
 .perform-record-modal {
-    /deep/ .search-form-container {
+    ::v-deep .search-form-container {
         .el-form {
             margin-bottom: 0;
             padding: 0;
         }
     }
-    /deep/ .show-data-wrapper {
+    ::v-deep .show-data-wrapper {
         padding: 15px 0;
     }
 }

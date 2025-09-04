@@ -704,7 +704,7 @@ export default {
 }
 .preview-dialog {
   .preview-phone {
-    /deep/ .preview {
+    ::v-deep .preview {
       margin: 0 auto;
     }
   }
@@ -716,7 +716,7 @@ export default {
     color: #606266;
   }
 }
-/deep/ .search-form-container {
+::v-deep .search-form-container {
     margin-bottom: -25px;
 }
 </style>

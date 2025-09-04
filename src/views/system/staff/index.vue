@@ -1035,7 +1035,7 @@ export default {
 .img-wrap {
   height: 340px;
   overflow: auto;
-  /deep/.el-radio__input {
+  ::v-deep.el-radio__input {
     position: absolute;
     right: 0;
   }
@@ -1048,7 +1048,7 @@ export default {
   text-align: left;
 }
 .member-info-modal {
-  /deep/ .el-dialog__body {
+  ::v-deep .el-dialog__body {
     padding: 20px;
   }
   .modal-top {
@@ -1056,7 +1056,7 @@ export default {
     align-items: center;
   }
   .modal-bottom {
-    /deep/ .el-form-item__content {
+    ::v-deep .el-form-item__content {
       width: calc(100% - 80px);
       position: relative;
       .el-cascader,
@@ -1129,13 +1129,13 @@ export default {
 .pd15 {
   padding: 15px;
 }
-/deep/ .el-table .el-table__header-wrapper th {
+::v-deep .el-table .el-table__header-wrapper th {
   background: #eee;
 }
 .sync-user-btn {
   margin-left: 10px;
 }
-/deep/ .el-textarea .el-textarea__inner {
+::v-deep .el-textarea .el-textarea__inner {
   padding-right: 45px;
 }
 .divider {
@@ -1146,7 +1146,7 @@ export default {
   margin-bottom: -4px;
 }
 .drawer-div, .extra-drawer-div {
-  /deep/ .el-drawer__container {
+  ::v-deep .el-drawer__container {
     .el-drawer {
       width: 780px !important;
       .el-drawer__header {
@@ -1158,10 +1158,10 @@ export default {
       }
     }
   }
-  /deep/ .el-drawer__header {
+  ::v-deep .el-drawer__header {
     margin-bottom: 15px;
   }
-  /deep/ .el-drawer__body {
+  ::v-deep .el-drawer__body {
     padding: 0 20px;
     height: calc(100% - 43px);
   }

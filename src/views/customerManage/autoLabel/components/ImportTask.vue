@@ -237,7 +237,7 @@ export default {
 <style scoped lang="scss">
 @import '~@/styles/mixin.scss';
 .import-file-div {
-  /deep/ .el-dialog {
+  ::v-deep .el-dialog {
     max-height: 600px !important;
     overflow: auto;
     .el-dialog__body {
@@ -253,21 +253,21 @@ export default {
       margin: 10px 0;
     }
     .upload-template {
-      /deep/ .el-form-item:hover {
+      ::v-deep .el-form-item:hover {
         background: none;
       }
       .el-form {
         margin-top: 10px;
       }
-      /deep/ .el-upload {
+      ::v-deep .el-upload {
         display: block;
         width: fit-content;
         text-align: start;
       }
-      /deep/ .el-input__inner {
+      ::v-deep .el-input__inner {
         padding-right: 48px;
       }
-      /deep/ .upload-div {
+      ::v-deep .upload-div {
         button {
           padding: 7px 15px;
         }

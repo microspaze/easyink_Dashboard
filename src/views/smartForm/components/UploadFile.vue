@@ -215,7 +215,7 @@ export default {
     font-size: 12px;
 }
 .upload-drag-div {
-  /deep/ .el-upload {
+  ::v-deep .el-upload {
       width: 100%;
       .el-upload-dragger {
           width: 100%;
@@ -229,7 +229,7 @@ export default {
   .text, .tip {
       line-height: 26px;
   }
-  /deep/ .el-upload-list {
+  ::v-deep .el-upload-list {
     display: none;
   }
 }
@@ -265,7 +265,7 @@ export default {
   line-height: 23px;
   flex-direction: column;
 }
-/deep/.el-upload--picture-card {
+::v-deep.el-upload--picture-card {
   width: 80px !important;
   height: 80px!important;
   line-height: 80px;

@@ -130,7 +130,7 @@ export default {
 
 <style lang="scss" scoped>
 @import '~@/styles/mixin.scss';
-/deep/.txt-uploader {
+::v-deep.txt-uploader {
   display: inline-block;
   .el-upload {
     border-radius: 3px;

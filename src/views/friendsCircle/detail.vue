@@ -244,21 +244,21 @@ export default {
   flex: 1;
   display: flex;
   flex-direction: column;
-  /deep/ .el-tabs__header {
+  ::v-deep .el-tabs__header {
     background: #fff;
     margin: 0;
   }
-  /deep/ .el-card__body {
+  ::v-deep .el-card__body {
     display: flex;
     position: relative;
     padding-top: 60px;
   }
-  /deep/ .el-tabs__item {
+  ::v-deep .el-tabs__item {
     width: 100px;
     text-align: center;
     padding: 0;
   }
-  /deep/ .el-tabs__active-bar {
+  ::v-deep .el-tabs__active-bar {
     width: 100px!important;
   }
 }

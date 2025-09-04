@@ -246,7 +246,7 @@ export default {
 </script>
 <style scoped lang='scss'>
 .chart-show {
-  /deep/ .show-data-wrapper {
+  ::v-deep .show-data-wrapper {
     overflow: auto;
     padding-bottom: 0;
     .data-container {

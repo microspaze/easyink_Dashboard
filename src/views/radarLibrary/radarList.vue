@@ -460,7 +460,7 @@ export default {
 </script>
 
 <style scoped lang="scss">
-/deep/ .el-table th.el-table__cell.is-sortable > .cell {
+::v-deep .el-table th.el-table__cell.is-sortable > .cell {
   display: flex;
   align-items: center;
 }

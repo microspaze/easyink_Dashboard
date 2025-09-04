@@ -118,7 +118,7 @@ export default {
     .list {
         overflow-y: auto;
         height: 100%;
-        /deep/ .el-loading-spinner{margin-top: 20px;}
+        ::v-deep .el-loading-spinner{margin-top: 20px;}
        .fr{float:right;}
        .gray{color: #999;}
        .padt10{padding-top: 10px;}

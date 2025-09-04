@@ -78,7 +78,7 @@ export default {
 .group-sop-page {
   display: flex;
   flex-direction: column;
-  /deep/ .content-container {
+  ::v-deep .content-container {
     flex: 1;
     overflow: auto;
     .sop-list-page {

@@ -240,7 +240,7 @@ export default {
 </template>
 
 <style lang="scss" scoped>
-/deep/.uploader {
+::v-deep.uploader {
   display: inline-block;
   line-height: 16px;
   .el-upload {

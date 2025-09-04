@@ -64,7 +64,7 @@ export default {
 .page-wrap {
   display: flex;
   flex-direction: column;
-  /deep/ .content-container {
+  ::v-deep .content-container {
     flex: 1;
     overflow: auto;
     .overview-page {

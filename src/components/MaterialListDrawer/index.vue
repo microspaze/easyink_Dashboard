@@ -634,7 +634,7 @@ export default {
 </template>
 
 <style lang="scss" scoped>
-/deep/ .el-tag:nth-of-type(1) {
+::v-deep .el-tag:nth-of-type(1) {
   margin-right: 0px;
 }
 .sub-title {
@@ -645,7 +645,7 @@ export default {
   left: 110px;
 }
 .material-list-drawer {
-  /deep/ .el-drawer__container {
+  ::v-deep .el-drawer__container {
     .el-drawer {
       width: 898px !important;
     }
@@ -697,7 +697,7 @@ export default {
             align-content: flex-start;
             display: flex;
           }
-          /deep/ .item-container {
+          ::v-deep .item-container {
             margin-right: 10px;
           }
         }

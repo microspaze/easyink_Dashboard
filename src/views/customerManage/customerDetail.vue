@@ -624,7 +624,7 @@ export default {
       margin: 10px;
       border-right: 1px solid #D9D9D9;
     }
-    /deep/.el-tabs {
+    ::v-deep.el-tabs {
       width: 80%;
       .el-tabs__nav-next, .el-tabs__nav-prev {
         line-height: 42px;
@@ -637,15 +637,15 @@ export default {
       }
     }
   }
-  /deep/ .el-tabs__item {
+  ::v-deep .el-tabs__item {
       font-size:14px;
       padding: 0 15px;
   }
 
-  /deep/ .el-tabs__nav-wrap::after {
+  ::v-deep .el-tabs__nav-wrap::after {
       display: none;
   }
-  /deep/ .el-tabs__active-bar {
+  ::v-deep .el-tabs__active-bar {
       transition: transform 0.1s cubic-bezier(0.645, 0.045, 0.355, 1), -webkit-transform 0.1s cubic-bezier(0.645, 0.045, 0.355, 1);
   }
 }
@@ -707,7 +707,7 @@ export default {
     }
   }
   .customer-detail {
-    /deep/ .el-descriptions__body {
+    ::v-deep .el-descriptions__body {
       .el-descriptions-row {
         // display: flex;
         .el-descriptions-item {
@@ -753,7 +753,7 @@ export default {
     background-color: #fff;
     height: 100%;
     position: relative;
-    /deep/ .el-tabs {
+    ::v-deep .el-tabs {
       .el-tabs__active-bar {
         margin-left: 5px;
       }
@@ -770,7 +770,7 @@ export default {
     margin-top: 15px;
     .el-descriptions {
       margin-bottom: 20px;
-      /deep/ .el-descriptions__header {
+      ::v-deep .el-descriptions__header {
         @include border_style($direction: left, $width: 3px);
         padding-left: 10px;
       }

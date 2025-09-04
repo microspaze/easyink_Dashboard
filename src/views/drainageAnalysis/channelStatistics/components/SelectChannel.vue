@@ -247,7 +247,7 @@ export default {
 </template>
 
 <style lang="scss" scoped>
-/deep/ .pagination-container {
+::v-deep .pagination-container {
   text-align: center;
 }
 .head-container {

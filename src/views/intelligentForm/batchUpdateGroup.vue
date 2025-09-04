@@ -117,7 +117,7 @@ export default {
   .batch-update-group-form {
       height: 100px;
   }
-  /deep/ .el-cascader {
+  ::v-deep .el-cascader {
       width: 100%;
   }
 }

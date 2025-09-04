@@ -433,7 +433,7 @@ export default {
     width: 60px;
     position: absolute;
     margin-top: 3px;
-    /deep/ .el-button--small{
+    ::v-deep .el-button--small{
       padding: 3px 0px;
     }
 }

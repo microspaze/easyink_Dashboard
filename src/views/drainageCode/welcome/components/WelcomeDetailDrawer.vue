@@ -175,12 +175,12 @@ export default {
           font-weight: bold;
           margin-bottom: 20px;
         }
-        /deep/ .welcome-msg-title {
+        ::v-deep .welcome-msg-title {
             font-size: 16px;
             color: $black;
             margin-bottom: 10px;
         }
-        /deep/ .default-msg-info {
+        ::v-deep .default-msg-info {
             color: #666666;
         }
         .special-welcome-div {

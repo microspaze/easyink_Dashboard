@@ -190,7 +190,7 @@ export default {
     line-height: 30px;
   }
 }
-/deep/ .el-input--small .el-input__inner {
+::v-deep .el-input--small .el-input__inner {
   height: 24px;
   line-height: 0;
 }

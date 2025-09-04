@@ -25,7 +25,7 @@ module.exports = {
   // webpack-dev-server 相关配置
   devServer: {
     host: '0.0.0.0',
-    port: '80',
+    port: '8091',
     // 自动打开浏览器
     open: true,
     proxy: {
@@ -51,6 +51,7 @@ module.exports = {
   css: {
     loaderOptions: {
       sass: {
+        implementation: require('sass'),
         // 依次导入的公用的scss变量，公用的scss混入，共用的默认样式
         prependData: `@import "./src/styles/variables.scss";`
       }

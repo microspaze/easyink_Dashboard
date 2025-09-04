@@ -324,18 +324,18 @@ export default {
 
 <style lang="scss" scoped>
 @import '~@/styles/mixin.scss';
-/deep/.el-form-item:hover {
+::v-deep.el-form-item:hover {
   background: unset;
 }
-/deep/.el-alert__title {
+::v-deep.el-alert__title {
   font-size: 12px;
 }
-/deep/.uploader-icon {
+::v-deep.uploader-icon {
   width: 135px;
   height: 135px;
   line-height: 135px;
 }
-/deep/.upload-img {
+::v-deep.upload-img {
   width: 135px;
   height: 135px;
 }
@@ -367,8 +367,8 @@ export default {
   @include border_style($width: 3px, $direction: left);
   padding-left: 10px;
 }
-/deep/.basic-info .el-input,
-/deep/.company-info .el-input {
+::v-deep.basic-info .el-input,
+::v-deep.company-info .el-input {
   width: 225px;
 }
 .icon-question {
@@ -380,7 +380,7 @@ export default {
   justify-content: space-between;
   width: 100%;
 }
-/deep/ .el-textarea .el-textarea__inner {
+::v-deep .el-textarea .el-textarea__inner {
   padding-right: 45px;
 }
 </style>

@@ -157,7 +157,7 @@ export default {
       padding: 0 5px;
       bottom: 5px;
     }
-    /deep/ .el-image {
+    ::v-deep .el-image {
       .image-slot {
         height: 347px;
         display: flex;
@@ -169,7 +169,7 @@ export default {
       }
     }
   }
-  /deep/ .el-image {
+  ::v-deep .el-image {
       img {
           border-radius: 10px;
           max-width: 200px;

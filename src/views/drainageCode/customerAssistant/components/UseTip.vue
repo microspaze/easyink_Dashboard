@@ -119,7 +119,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-/deep/ .el-drawer__header {
+::v-deep .el-drawer__header {
   margin-bottom: 26px
 }
 .draw-body {

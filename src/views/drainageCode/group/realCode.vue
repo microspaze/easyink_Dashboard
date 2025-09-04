@@ -396,7 +396,7 @@ export default {
   width: 50px;
   height: 50px;
 }
-/deep/ .image-uploader {
+::v-deep .image-uploader {
   .uploader-icon {
     width: 80px;
     height: 80px;
@@ -438,7 +438,7 @@ export default {
   }
 }
 .qrcode-div {
-  /deep/ .upload-div {
+  ::v-deep .upload-div {
     display: flex;
     align-items: flex-end;
     .tip {

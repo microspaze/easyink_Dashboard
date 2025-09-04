@@ -136,7 +136,7 @@ export default {
     color: #fff;
     font-size: 24px;
   }
-  /deep/ .el-badge__content {
+  ::v-deep .el-badge__content {
     border: 1px solid #e74e59;
   }
 }

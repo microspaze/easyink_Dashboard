@@ -553,12 +553,12 @@ export default {
 <style scoped lang="scss">
 .new-add {
   position: absolute;
-  /deep/.el-dialog {
+  ::v-deep.el-dialog {
     position: relative;
     top: 15%;
     width: 800px;
   }
-  /deep/.el-dialog__body {
+  ::v-deep.el-dialog__body {
     padding: 6px 20px;
   }
 }

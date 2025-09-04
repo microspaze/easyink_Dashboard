@@ -283,7 +283,7 @@ export default {
         padding: 10px;
         visibility: hidden;
         .left-tool {
-          /deep/ .el-checkbox {
+          ::v-deep .el-checkbox {
               .el-checkbox__inner {
                   width: 16px;
                   height: 16px;

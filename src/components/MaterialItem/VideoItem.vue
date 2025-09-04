@@ -181,7 +181,7 @@ export default {
         flex-direction: column;
         justify-content: flex-end;
         position: relative;
-        /deep/ .image-slot {
+        ::v-deep .image-slot {
           height: 200px;
           display: flex;
           align-items: center;
@@ -196,7 +196,7 @@ export default {
           border-radius: 10px;
         }
     }
-    /deep/ .el-image {
+    ::v-deep .el-image {
         img {
             border-radius: 10px;
             max-width: 200px;

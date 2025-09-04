@@ -425,25 +425,25 @@ export default {
     border: 1px solid $borderColor;
     padding: 10px;
     width: 360px;
-    /deep/ .el-form-item__error {
+    ::v-deep .el-form-item__error {
       position: relative;
     }
-    /deep/ .upload-drag-div {
+    ::v-deep .upload-drag-div {
       width: 340px;
     }
-    /deep/ .el-input,
+    ::v-deep .el-input,
     .el-textarea,
     .upload-drag-div {
       margin-top: 15px;
     }
-    /deep/ .el-input {
+    ::v-deep .el-input {
       input {
         padding: 0 10px;
       }
     }
-    /deep/ .preview-div,
+    ::v-deep .preview-div,
     .link-preview,
-    /deep/ .appid-preview-div {
+    ::v-deep .appid-preview-div {
       margin-top: 10px;
     }
   }

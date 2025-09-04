@@ -514,7 +514,7 @@ export default {
   }
 }
 .dropdown-reset {
-  /deep/ button {
+  ::v-deep button {
     @include btn_reset_color($color-theme2-1);
     margin-bottom: 0!important;
     &:nth-child(1) {

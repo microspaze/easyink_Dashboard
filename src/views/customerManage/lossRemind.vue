@@ -536,10 +536,10 @@ export default {
 }
 .loss-set {
   padding-top: 0;
-  /deep/ .el-form-item {
+  ::v-deep .el-form-item {
     padding: 0;
   }
-  /deep/ .ml10 {
+  ::v-deep .ml10 {
     margin-left: 0;
   }
   .we-emple-code-tags-tip {

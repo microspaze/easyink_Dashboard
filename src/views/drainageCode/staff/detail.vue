@@ -471,7 +471,7 @@ export default {
 }
 .preview-dialog {
   .preview-phone {
-    /deep/ .preview {
+    ::v-deep .preview {
       margin: 0 auto;
     }
   }

@@ -134,7 +134,7 @@ export default {
   flex-flow: column;
   justify-content: space-between;
 }
-/deep/ .el-empty__description p{
+::v-deep .el-empty__description p{
     font-size: 18px;
     font-weight: bold;
     color: #333;
@@ -144,13 +144,13 @@ export default {
   display: flex;
   flex-direction: column;
 }
-/deep/ .el-tabs__content{
+::v-deep .el-tabs__content{
   min-height: 100%;
   display: flex;
   flex: 1;
   flex-direction: column;
 }
-/deep/ .el-tab-pane{
+::v-deep .el-tab-pane{
   min-height: 100%;
   display: flex;
   flex: 1;

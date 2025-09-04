@@ -248,7 +248,7 @@ export default {
     color: rgba(127, 127, 127, 100);
   }
   .el-form-item {
-    /deep/ .el-form-item__content {
+    ::v-deep .el-form-item__content {
       display: flex;
       align-items: center;
     }

@@ -324,7 +324,7 @@ export default {
   flex-direction: column;
   justify-content: space-between;
   height: 100%;
-  /deep/ .el-form {
+  ::v-deep .el-form {
     flex: 1;
     overflow: auto;
   }
@@ -342,11 +342,11 @@ export default {
       cursor: pointer;
     }
   }
-  /deep/ .el-form-item__error {
+  ::v-deep .el-form-item__error {
     position: relative;
   }
   .day-time-picker {
-    /deep/ .el-input__inner {
+    ::v-deep .el-input__inner {
       padding-right: 0px;
     }
   }

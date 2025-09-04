@@ -395,25 +395,25 @@ export default {
      content:'  *';
      color:red;
     }
-    /deep/ .el-divider {
+    ::v-deep .el-divider {
       margin: 5px 0;
     }
-    /deep/ .el-form-item:hover  {
+    ::v-deep .el-form-item:hover  {
       background: none;
     }
-    /deep/ .el-form-item {
+    ::v-deep .el-form-item {
       padding: 0;
     }
 
     .form-preview-item {
-      /deep/ .el-form-item__label {
+      ::v-deep .el-form-item__label {
        line-height: 23px;
       }
       position: relative;
-      /deep/ .el-input__suffix-inner {
+      ::v-deep .el-input__suffix-inner {
         pointer-events: none;
       }
-      /deep/ .el-textarea {
+      ::v-deep .el-textarea {
         textarea {
           overflow: hidden;
         }
@@ -427,7 +427,7 @@ export default {
             white-space: pre-line;
             display: block;
             margin-bottom: 10px;
-           /deep/ .el-radio__label {
+           ::v-deep .el-radio__label {
               margin-left: -28px;
               right: -26px;
               position: relative;
@@ -444,7 +444,7 @@ export default {
           white-space: pre-line;
           display: flex;
           align-items: flex-start;
-          /deep/ .el-checkbox__input {
+          ::v-deep .el-checkbox__input {
             margin-top: 2px;
           }
         }

@@ -218,7 +218,7 @@ export default {
   }
 }
 .drawer-div, .extra-drawer-div {
-  /deep/ .el-drawer__container {
+  ::v-deep .el-drawer__container {
     .el-drawer {
       width: 780px !important;
       .el-drawer__header {
@@ -230,7 +230,7 @@ export default {
       }
     }
   }
-  /deep/ .el-drawer__body {
+  ::v-deep .el-drawer__body {
     padding: 0 20px;
     height: calc(100% - 43px);
   }

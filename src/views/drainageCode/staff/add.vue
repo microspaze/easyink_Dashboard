@@ -657,20 +657,20 @@ export default {
   border: 1px solid rgba(217, 217, 217, 100);
   padding: 10px;
   margin-bottom: 10px;
-  /deep/.el-input-group__prepend {
+  ::v-deep.el-input-group__prepend {
     color: rgba(193, 194, 197, 100);
   }
-  /deep/.el-input {
+  ::v-deep.el-input {
     width: 320px;
   }
-  /deep/.el-input-group__append {
+  ::v-deep.el-input-group__append {
     color: #c1c2c5;
   }
 }
 .add-time {
   border: 1px solid rgba(217, 217, 217, 100);
   padding: 10px;
-  /deep/.el-date-editor {
+  ::v-deep.el-date-editor {
     width: 330px;
   }
 }
@@ -692,7 +692,7 @@ export default {
   }
 }
 .welcome-textarea {
-  /deep/textarea {
+  ::v-deeptextarea {
     height: 93px !important;
     min-height: 93px !important;
   }

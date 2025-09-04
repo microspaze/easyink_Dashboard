@@ -690,7 +690,7 @@ export default {
     align-items: center;
   }
   .material-tag-select {
-    /deep/ .el-tag {
+    ::v-deep .el-tag {
       background-color: #fff;
       font-size: 12px;
       color: #7f7f7f;
@@ -713,12 +713,12 @@ export default {
     font-size: 14px;
     margin-left: 5px;
   }
-  /deep/ .upload-button {
+  ::v-deep .upload-button {
     border: 1px solid $borderColor;
     color: $grayColor;
   }
   .radarForm {
-    /deep/ .el-form-item {
+    ::v-deep .el-form-item {
       padding: 5px 0px;
       .el-form-item__label {
         margin-left: -10px;

@@ -275,7 +275,7 @@ export default {
       margin-left: 5px;
       max-height: 350px;
       overflow: auto;
-      /deep/ .el-tag {
+      ::v-deep .el-tag {
         margin-right: 5px;
         margin-bottom: 5px;
         font-size: 12px;

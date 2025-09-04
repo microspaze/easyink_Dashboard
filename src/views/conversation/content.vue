@@ -58,10 +58,10 @@ export default {
  .content-tabs {
     height: 100%;
     position: relative;
-    /deep/ .el-tabs__header {
+    ::v-deep .el-tabs__header {
         height: 40px;
     }
-    /deep/ .el-tabs__content {
+    ::v-deep .el-tabs__content {
         height: calc(100% - 55px);
         .content-tab-pane {
             height: 100%;

@@ -125,7 +125,7 @@ export default {
   }
 }
   .disable {
-    /deep/.el-button.is-disabled,
+    ::v-deep.el-button.is-disabled,
     .el-button.is-disabled:hover,
     .el-button.is-disabled:focus {
       background-color: #f5f7fa;

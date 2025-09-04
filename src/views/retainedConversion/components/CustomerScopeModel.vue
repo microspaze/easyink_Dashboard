@@ -116,7 +116,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-/deep/ .customer-scope-dialog {
+::v-deep .customer-scope-dialog {
   .el-dialog__body {
     max-height: 600px;
   }

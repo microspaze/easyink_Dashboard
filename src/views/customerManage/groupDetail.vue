@@ -378,21 +378,21 @@ export default {
   flex-direction: column;
   .tab {
     margin-top: 10px;
-    /deep/ .el-form {
+    ::v-deep .el-form {
       margin-top: 0;
     }
-    /deep/ .search-form-container {
+    ::v-deep .search-form-container {
       background-color: #eee;
     }
   }
   .todo-tab {
     flex: 1;
     position: relative;
-    /deep/ .customer-info-list {
+    ::v-deep .customer-info-list {
       height: 100%;
     }
   }
-  /deep/ .el-tabs {
+  ::v-deep .el-tabs {
     height: 100%;
     background-color: #fff;
     .el-tabs__active-bar {
@@ -409,7 +409,7 @@ export default {
     }
   }
   .card {
-    /deep/ .el-card__body {
+    ::v-deep .el-card__body {
       display: flex;
       position: relative;
       padding-top: 60px;

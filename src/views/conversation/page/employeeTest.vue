@@ -663,7 +663,7 @@ export default {
 
 </script>
 <style lang="scss" scoped>
-  /deep/.el-tabs__nav-scroll {
+  ::v-deep.el-tabs__nav-scroll {
     padding-left: 15px;
   }
 
@@ -686,7 +686,7 @@ export default {
   .employ {
     background: #f6f6f9;
     height: 100%;
-    /deep/ .el-row {
+    ::v-deep .el-row {
       height: 100%;
     }
     .footer-button {
@@ -708,7 +708,7 @@ export default {
       height: calc(100% - 52px);
       .tabs-div {
         height: calc(100% - 52px);
-        /deep/ .el-tabs__content {
+        ::v-deep .el-tabs__content {
           height: calc(100% - 40px);
           .hd-tab-pane {
             height: 100%;
@@ -718,20 +718,20 @@ export default {
           }
         }
       }
-      /deep/ .el-tabs__header {
+      ::v-deep .el-tabs__header {
         margin: 0;
       }
     }
     .hd_tabthree {
       height: calc(100% - 52px);
-      /deep/ .el-tabs__header {
+      ::v-deep .el-tabs__header {
         margin: 0;
         height: 40px;
       }
       .chat-content-tabs {
         height: 100%;
         position: relative;
-        /deep/ .el-tabs__content {
+        ::v-deep .el-tabs__content {
           height: calc(100% - 40px);
           .el-tab-pane {
             height: 100%;
@@ -772,7 +772,7 @@ export default {
       height: calc(100% - 92px) !important;
       .conversation-user-tree {
         height: 100%;
-        /deep/ .common-tree-empty {
+        ::v-deep .common-tree-empty {
           height: 100%;
         }
       }
@@ -784,15 +784,15 @@ export default {
       overflow-y: auto;
       color: #999;
       text-align: center;
-      /deep/.el-tree-node__content:hover {
+      ::v-deep.el-tree-node__content:hover {
         background-color: #EEE;
       }
-      /deep/ .el-tree-node:focus > .el-tree-node__content {
+      ::v-deep .el-tree-node:focus > .el-tree-node__content {
         background-color: #EEE;
       }
     }
     .ct_box_color {
-      /deep/ .is-current {
+      ::v-deep .is-current {
         background-color: #EEE;
       }
     }

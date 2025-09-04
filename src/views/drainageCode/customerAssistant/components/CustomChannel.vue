@@ -248,10 +248,10 @@ export default {
 </script>
 
 <style scoped lang="scss">
-/deep/ .show-data-wrapper {
+::v-deep .show-data-wrapper {
   padding-top: 10px;
 }
-/deep/ .el-dialog__body {
+::v-deep .el-dialog__body {
   padding-top: 10px;
 }
 .add-channel-visible {

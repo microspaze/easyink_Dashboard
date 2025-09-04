@@ -341,7 +341,7 @@ export default {
   display: flex;
   flex-direction: column;
   .detail-card-div {
-    /deep/ .el-card__body {
+    ::v-deep .el-card__body {
       display: flex;
       .info-div {
         .title {
@@ -382,7 +382,7 @@ export default {
         height: 20px;
       }
     }
-    /deep/ .sop-rule-list {
+    ::v-deep .sop-rule-list {
       padding-left: 24px;
     }
   }

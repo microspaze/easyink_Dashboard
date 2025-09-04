@@ -216,7 +216,7 @@ export default {
     .alert-tip {
       margin-left: 18px;
       margin-top: 15px;
-      /deep/ .el-alert__description {
+      ::v-deep .el-alert__description {
         line-height: 20px;
       }
     }

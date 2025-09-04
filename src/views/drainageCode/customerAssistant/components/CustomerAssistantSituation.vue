@@ -142,7 +142,7 @@ export default {
   cursor: pointer;
 }
 .loading {
-  /deep/ .el-loading-mask {
+  ::v-deep .el-loading-mask {
     .el-loading-spinner {
       margin-top: -12px;
       margin-left: 6px;

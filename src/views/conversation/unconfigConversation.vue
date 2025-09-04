@@ -96,7 +96,7 @@ export default {
   .content {
     padding: 15px;
     flex: 1;
-    /deep/ .el-alert {
+    ::v-deep .el-alert {
       margin-bottom: 20px;
       border: 1px solid #FFE58F;
       .el-alert__title {

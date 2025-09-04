@@ -122,7 +122,7 @@ export default {
 
 <style lang="scss" scoped>
 .miniapp-material {
-  /deep/ .upload-div {
+  ::v-deep .upload-div {
     display: flex;
     align-items: flex-end;
     .tip {
@@ -135,11 +135,11 @@ export default {
     cursor: pointer;
   }
 }
-/deep/ .el-drawer {
+::v-deep .el-drawer {
   width: 780px !important;
 }
 .appid-drawer {
-  /deep/ .el-drawer__body {
+  ::v-deep .el-drawer__body {
     padding: 0 20px;
     height: calc(100% - 43px);
   }

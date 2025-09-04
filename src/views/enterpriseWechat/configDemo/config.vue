@@ -316,10 +316,10 @@ export default {
 @import '~@/styles/mixin.scss';
 
 .quick-demo {
-  /deep/ .el-step__description {
+  ::v-deep .el-step__description {
     font-size: 14px;
   }
-  /deep/ .el-step__title {
+  ::v-deep .el-step__title {
     padding-bottom: 20px;
     color: $black;
   }
@@ -329,7 +329,7 @@ export default {
     .quick-config-dialog {
     position: absolute;
     right: 0;
-    /deep/ .el-dialog {
+    ::v-deep .el-dialog {
       position: absolute;
       left: 380px;
       top: 170px;
@@ -352,10 +352,10 @@ export default {
 }
 .step-div {
   margin-top: 30px;
-  /deep/ .el-step.is-vertical .el-step__line {
+  ::v-deep .el-step.is-vertical .el-step__line {
     width: 1px;
   }
-  /deep/ .el-step {
+  ::v-deep .el-step {
     .is-success {
       .el-step__line {
         .el-step__line-inner {
@@ -364,7 +364,7 @@ export default {
       }
     }
   }
-  /deep/ .el-step__line {
+  ::v-deep .el-step__line {
     @include bg_color($color-theme2-1);
   }
   .qrcode-div {
@@ -413,7 +413,7 @@ export default {
     margin-top: 7px;
   }
   .icon {
-    /deep/.el-icon-warning {
+    ::v-deep.el-icon-warning {
         color:$orange;
         font-size: 25px;
     }

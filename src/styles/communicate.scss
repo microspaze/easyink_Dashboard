@@ -1,6 +1,6 @@
-@import '~@/styles/mixin.scss';
+@import './mixin.scss';
 .wrap-head {
-  /deep/ .el-button--text {
+  ::v-deep .el-button--text {
     color: #666;
     font-size: 14px;
     line-height: 28px;
@@ -27,7 +27,7 @@
   bottom: 48px;
   right: 0;
   overflow: auto;
-  /deep/ .el-alert--info.is-light {
+  ::v-deep .el-alert--info.is-light {
     background-color: rgba(244, 244, 245, 100);
     color: rgba(144, 147, 153, 100);
     .el-alert__description {

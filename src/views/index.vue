@@ -379,7 +379,7 @@ export default {
     width: 100%;
     background: #f1f1f1;
     .data-overview {
-      /deep/ .tables {
+      ::v-deep .tables {
         height: 200px;
         .title_name {
           padding-top: 15px;
@@ -607,7 +607,7 @@ export default {
       border-radius: 5px;
       font-size: 16px;
 
-      /deep/ .el-col-12 {
+      ::v-deep .el-col-12 {
         width: 49%;
       }
 

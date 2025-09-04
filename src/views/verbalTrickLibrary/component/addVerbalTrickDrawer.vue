@@ -287,7 +287,7 @@ export default {
 </script>
 <style lang="scss" scoped>
 .verbal-trick-drawer {
-  /deep/ .el-drawer__container {
+  ::v-deep .el-drawer__container {
     .el-drawer {
         width: 780px !important;
         .el-drawer__header {

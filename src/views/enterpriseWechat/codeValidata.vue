@@ -124,7 +124,7 @@ export default {
     color: #999999;
     align-items: center;
     margin: 17px 0 15px 0;
-    /deep/ .el-input {
+    ::v-deep .el-input {
       width: 180px;
     }
     .code-time {

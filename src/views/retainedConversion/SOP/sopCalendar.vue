@@ -82,13 +82,13 @@ export default {
 </script>
 <style scoped lang='scss'>
 .calendar-container {
-    /deep/ .el-calendar__header {
+    ::v-deep .el-calendar__header {
         .el-calendar__title {
             font-size: 16px;
             font-weight: bold;
         }
         }
-        /deep/ .el-calendar__body {
+        ::v-deep .el-calendar__body {
         .el-calendar-table {
             .el-calendar-day {
             padding: 0px;

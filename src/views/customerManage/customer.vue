@@ -1124,7 +1124,7 @@ export default {
   margin-bottom: 10px;
   margin-top: -10px;
   padding: 0 15px 15px;
- /deep/ .el-tag {
+ ::v-deep .el-tag {
     background-color: #f4f4f5 !important;
     border-color: #e9e9eb !important;
     color: #909399 !important;

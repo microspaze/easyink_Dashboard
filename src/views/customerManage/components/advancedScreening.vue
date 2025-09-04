@@ -398,19 +398,19 @@ export default {
 
 <style lang="scss" scoped>
 .advancedScreening-drawer {
-  /deep/ .el-drawer__header {
+  ::v-deep .el-drawer__header {
     margin-bottom: 22px;
   }
-  /deep/ .el-form-item:hover{
+  ::v-deep .el-form-item:hover{
     background: none;
   }
-  /deep/ .el-input {
+  ::v-deep .el-input {
     width: 225px !important;
   }
-  /deep/  .el-date-editor {
+  ::v-deep  .el-date-editor {
     width: 225px !important;
   }
-  /deep/ .el-form--label-top .el-form-item__label {
+  ::v-deep .el-form--label-top .el-form-item__label {
     padding: 0;
   }
   .drawer-container {

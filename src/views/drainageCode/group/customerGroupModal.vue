@@ -246,7 +246,7 @@ export default {
 </style>
 <style scoped lang='scss'>
 .customer-group-tailor {
-    /deep/ .avatar-upload-preview {
+    ::v-deep .avatar-upload-preview {
         width: 200px;
         height: 200px;
         border-radius: 0px;

@@ -74,7 +74,7 @@ export default {
 .welcome-detail-special-div {
     margin-top: 15px;
     .welcome-time-div {
-        /deep/ .el-tag {
+        ::v-deep .el-tag {
             background-color: #F4F4F5;
             color: #909399;
             height: 32px;

@@ -390,7 +390,7 @@ export default {
     padding: 0;
   }
 }
-/deep/ .add-btn {
+::v-deep .add-btn {
   margin-right: 10px;
 }
 .content {

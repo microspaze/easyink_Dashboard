@@ -61,7 +61,7 @@ export default {
         align-items: center;
         justify-content: center;
         border-radius: 3px;
-        /deep/ .el-image {
+        ::v-deep .el-image {
           height: 92px;
           display: flex;
           align-items: center;

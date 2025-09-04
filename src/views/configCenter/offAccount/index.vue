@@ -245,21 +245,21 @@ export default {
   .blue-btn {
     color: #409EFF;
   }
-  /deep/ .el-steps {
+  ::v-deep .el-steps {
     height: 100%;
   }
-  /deep/ .el-step__head.is-finish{
+  ::v-deep .el-step__head.is-finish{
     color: black;
     border-color: black !important;
   }
-  /deep/ .el-step__line-inner {
+  ::v-deep .el-step__line-inner {
     border-color: #B9BDC5 !important;
   }
-  /deep/ .el-step__title.is-finish {
+  ::v-deep .el-step__title.is-finish {
     font-weight: bold;
     color: black !important;
   }
-  /deep/ .el-step__description.is-finish {
+  ::v-deep .el-step__description.is-finish {
     color: black !important;
   }
   .app-container {

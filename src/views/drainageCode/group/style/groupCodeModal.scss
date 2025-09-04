@@ -3,7 +3,7 @@
         color: #aaa;
         font-size: 12px;
     }
-    /deep/ .image-uploader {
+    ::v-deep .image-uploader {
         display: flex;
         align-items: flex-end;
         .uploader-icon {

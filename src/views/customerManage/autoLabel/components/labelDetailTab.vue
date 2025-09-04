@@ -225,7 +225,7 @@ export default {
     display: flex;
     flex-direction: column;
     .detail-card-div {
-        /deep/ .el-card__body {
+        ::v-deep .el-card__body {
             display: flex;
             .info-div {
                 .title {
@@ -268,7 +268,7 @@ export default {
         }
     }
 }
-/deep/ .el-card__body {
+::v-deep .el-card__body {
     padding:20px
 }
 .scene-text{

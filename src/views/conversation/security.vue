@@ -47,7 +47,7 @@ export default {
 .security {
   .radio-group-div {
     margin-bottom: 15px;
-    /deep/ .el-radio-button {
+    ::v-deep .el-radio-button {
       .el-radio-button__inner {
         height: 40px;
         line-height: 20px;

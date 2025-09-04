@@ -201,7 +201,7 @@ export default {
     position: absolute;
     width: 100%;
   }
-  /deep/ .el-timeline {
+  ::v-deep .el-timeline {
     .el-timeline-item__timestamp {
       color: #101010;
       font-size: 14px;
@@ -242,11 +242,11 @@ export default {
     }
   }
   .finish-card {
-    /deep/ .el-card {
+    ::v-deep .el-card {
       background-color: #F5F7FA;
     }
   }
-  /deep/ .el-card {
+  ::v-deep .el-card {
     width: 752px;
     .el-card__body {
       padding: 15px;

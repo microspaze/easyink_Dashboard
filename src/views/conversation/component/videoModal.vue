@@ -103,7 +103,7 @@ export default {
     cursor: pointer;
     font-size: 43px;
   }
-  #videoPlayer /deep/ .vjs-tech {
+  #videoPlayer ::v-deep .vjs-tech {
     height: 450px;
   }
 </style>

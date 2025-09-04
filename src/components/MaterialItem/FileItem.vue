@@ -272,7 +272,7 @@ export default {
         margin-left: 10px;
         width: 200px;
       }
-      /deep/ .el-checkbox {
+      ::v-deep .el-checkbox {
         .el-checkbox__inner {
           height: 16px;
           width: 16px;
@@ -296,7 +296,7 @@ export default {
         .iconfont {
           font-size: 40px;
         }
-        /deep/ .el-image {
+        ::v-deep .el-image {
           img {
             width: 45px;
             height: 45px;

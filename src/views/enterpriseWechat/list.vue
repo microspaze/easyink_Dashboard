@@ -369,7 +369,7 @@ export default {
   .quick-config-dialog {
     position: absolute;
     right: 0;
-    /deep/ .el-dialog {
+    ::v-deep .el-dialog {
       position: absolute;
       right: 226px;
       left: auto;

@@ -119,7 +119,7 @@ export default {
 </script>
 <style lang="scss" scoped>
 .nest-menu {
-  /deep/ .el-submenu {
+  ::v-deep .el-submenu {
     .el-submenu__title {
       height: 42px;
     }

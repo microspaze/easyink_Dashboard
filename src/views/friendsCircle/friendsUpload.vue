@@ -246,25 +246,25 @@ export default {
 
 <style lang="scss" scoped>
 // 隐藏上传按钮
-/deep/.uploadSty .el-upload--picture-card{
+::v-deep.uploadSty .el-upload--picture-card{
   width:70px !important;
   height:70px!important;
   line-height:70px;
 }
-/deep/.disuploadSty .el-upload--picture-card{
+::v-deep.disuploadSty .el-upload--picture-card{
   display:none;   /* 上传按钮隐藏 */
 }
-/deep/ .el-upload--picture-card {
+::v-deep .el-upload--picture-card {
   border: 0px !important;
 }
-/deep/ .el-upload-list--picture-card .el-upload-list__item {
+::v-deep .el-upload-list--picture-card .el-upload-list__item {
   width: 70px;
   height: 70px;
 }
-/deep/.el-upload-list__item {
+::v-deep.el-upload-list__item {
   transition: none !important;
 }
-/deep/ .el-button + .el-button {
+::v-deep .el-button + .el-button {
   margin-left: 0;
 }
 .upload-icon {
@@ -279,7 +279,7 @@ export default {
   width:68px;
   height:28px;
 }
-/deep/ .el-button--small {
+::v-deep .el-button--small {
   padding:9px 9px;
 }
 .upload-queue{

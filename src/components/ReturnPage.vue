@@ -76,7 +76,7 @@ export default {
 </script>
 <style scoped lang='scss'>
 .return-page-div{
-    /deep/ .el-button--text{
+    ::v-deep .el-button--text{
       color: #666;
       font-size: 14px;
       line-height: 28px;

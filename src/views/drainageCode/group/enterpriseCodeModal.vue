@@ -434,7 +434,7 @@ export default {
 <style lang="scss" src="./style/groupCodeModal.scss" scoped>
 </style>
 <style scoped lang='scss'>
-/deep/ .enterprise-code-modal {
+::v-deep .enterprise-code-modal {
     .el-dialog__body {
         padding-top: 10px;
     }

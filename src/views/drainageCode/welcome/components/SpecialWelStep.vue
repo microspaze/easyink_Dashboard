@@ -242,7 +242,7 @@ export default {
       }
     }
 }
-/deep/ .preview-phone {
+::v-deep .preview-phone {
   .preview {
     margin: 0 auto;
   }

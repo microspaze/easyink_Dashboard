@@ -232,13 +232,13 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-/deep/ .el-divider--horizontal {
+::v-deep .el-divider--horizontal {
   margin: 5px 0;
 }
-/deep/ .el-dialog__body {
+::v-deep .el-dialog__body {
   padding-top: 0;
 }
-/deep/ .el-form-item {
+::v-deep .el-form-item {
   padding-left: 0;
 }
 .alarm-setting-form {

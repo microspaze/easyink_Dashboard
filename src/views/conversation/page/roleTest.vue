@@ -378,24 +378,24 @@ export default {
   }
 
   .noborder {
-    /deep/ .el-input--mini .el-input__inner {
+    ::v-deep .el-input--mini .el-input__inner {
       width: 100px;
       border: none
     }
-    /deep/ input{
+    ::v-deep input{
       padding-left: 17px;
       padding-right: 17px;
     }
   }
 
-  .emcode /deep/ em {
+  .emcode ::v-deep em {
     color: #ff0000;
   }
   .right-container {
     height: 100%;
     display: flex;
     flex-direction: column;
-    /deep/ .show-data-wrapper {
+    ::v-deep .show-data-wrapper {
       flex: 1;
       display: flex;
       flex-direction: column;
@@ -439,7 +439,7 @@ export default {
   }
   .send-type-select {
     color: #333;
-    /deep/ .el-input__inner {
+    ::v-deep .el-input__inner {
       color: #515a6e;
       font-weight: 600;
     }

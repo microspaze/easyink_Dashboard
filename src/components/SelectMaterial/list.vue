@@ -154,7 +154,7 @@ export default {
 .img-wrap {
   height: 489px;
   overflow: auto;
-  /deep/.el-radio {
+  ::v-deep.el-radio {
     position: relative;
     .el-radio__input {
       position: absolute;
@@ -194,7 +194,7 @@ export default {
   height: 489px;
   overflow: auto;
 }
-/deep/ .el-table::before {
+::v-deep .el-table::before {
   height: 0;
 }
 </style>

@@ -85,7 +85,7 @@ export default {
 }
 .list {
   height: 100%;
-  /deep/ .el-loading-spinner {
+  ::v-deep .el-loading-spinner {
     margin-top: 20px;
   }
   .fr {

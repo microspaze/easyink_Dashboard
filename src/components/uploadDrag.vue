@@ -202,7 +202,7 @@ export default {
 </script>
 <style scoped lang='scss'>
 .upload-drag-div {
-    /deep/ .el-upload {
+    ::v-deep .el-upload {
         width: 100%;
         .el-upload-dragger {
             width: 100%;
@@ -215,7 +215,7 @@ export default {
         color: #aaa;
         font-size: 12px;
     }
-    /deep/ .el-upload-list {
+    ::v-deep .el-upload-list {
       display: none;
     }
 }
@@ -240,7 +240,7 @@ export default {
     .icon-player {
       position: absolute;
     }
-    /deep/ .el-image {
+    ::v-deep .el-image {
       height: 60px;
       width: 60px;
     }

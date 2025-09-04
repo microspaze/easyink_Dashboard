@@ -759,7 +759,7 @@ export default {
 
 <style lang="scss" scoped>
 @import '~@/styles/mixin.scss';
-/deep/ .el-divider--horizontal {
+::v-deep .el-divider--horizontal {
   margin-top: 12px;
   margin-bottom: 10px;
 }
@@ -808,13 +808,13 @@ export default {
       &:hover {
         background: none;
       }
-      /deep/ .el-form-item__content {
+      ::v-deep .el-form-item__content {
         flex: 1;
         padding-top: 2px;
         margin-top: -3px;
         margin-left: unset !important;
       }
-      /deep/ textarea {
+      ::v-deep textarea {
         min-height: 96px !important;
         height: 96px !important;
         width: 430px;
@@ -823,7 +823,7 @@ export default {
   }
   .el-alert {
     margin-top: 15px;
-    /deep/ .el-alert__title {
+    ::v-deep .el-alert__title {
       font-size: 12px;
     }
   }
@@ -836,11 +836,11 @@ export default {
     @include text_btn_color($color-theme2-1);
     font-size: 12px;
     border: 1px solid #e1f0ee;
-    /deep/ .el-tag__close {
+    ::v-deep .el-tag__close {
       @include text_btn_color($color-theme2-1);
       background-color: transparent;
     }
-    /deep/ .el-icon-close:hover {
+    ::v-deep .el-icon-close:hover {
       @include bg_primary_color($color-theme2-1);
       color: #fff;
     }
@@ -850,7 +850,7 @@ export default {
   .el-form-item {
     width: 508px !important;
   }
-  /deep/ .el-form-item__label::before {
+  ::v-deep .el-form-item__label::before {
     content: '*';
     color: #f00;
     padding-right: 3px;
@@ -873,7 +873,7 @@ export default {
   span {
     font-size: 14px;
   }
-  /deep/ .el-icon-refresh {
+  ::v-deep .el-icon-refresh {
     color: #666;
     font-size: 16px;
     margin-top: -3px;
@@ -907,17 +907,17 @@ export default {
     flex: 1;
     overflow-y: auto;
   }
-  /deep/ .el-form-item__content {
+  ::v-deep .el-form-item__content {
     max-width: 500px;
   }
   .send-range {
     display: flex;
     align-items: center;
-    /deep/ .el-form-item__content {
+    ::v-deep .el-form-item__content {
       margin-left: 0 !important;
     }
   }
-  /deep/ form textarea {
+  ::v-deep form textarea {
     border-radius: 4px 4px 0 0;
     max-width: 500px;
   }

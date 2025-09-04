@@ -67,7 +67,7 @@ export default {
 
 <style lang="scss" scoped>
 .poster-material {
-    /deep/ .upload-div {
+    ::v-deep .upload-div {
       display: flex;
       align-items: flex-end;
       .tip {

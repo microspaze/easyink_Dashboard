@@ -339,7 +339,7 @@ export default {
   height: 80px;
 }
 .wrap-head {
-  /deep/.el-button--text {
+  ::v-deep.el-button--text {
     color: #666;
     font-size: 14px;
     line-height: 28px;
@@ -362,7 +362,7 @@ export default {
   bottom: 48px;
   right: 0;
   overflow: auto;
-  /deep/.el-alert--info.is-light {
+  ::v-deep.el-alert--info.is-light {
     background-color: rgba(244, 244, 245, 100);
     color: rgba(144, 147, 153, 100);
     .el-alert__description {
@@ -382,23 +382,23 @@ export default {
   border: 1px solid rgba(217, 217, 217, 100);
   padding: 10px;
   margin-bottom: 10px;
-  /deep/.el-alert {
+  ::v-deep.el-alert {
     padding: 2px 5px;
   }
-  /deep/.el-input-group__prepend {
+  ::v-deep.el-input-group__prepend {
     color: rgba(193, 194, 197, 100);
   }
-  /deep/.el-input {
+  ::v-deep.el-input {
     width: 320px;
   }
 }
 .add-time {
   border: 1px solid rgba(217, 217, 217, 100);
   padding: 10px;
-  /deep/.el-alert {
+  ::v-deep.el-alert {
     padding: 2px 5px;
   }
-  /deep/.el-date-editor {
+  ::v-deep.el-date-editor {
     width: 330px;
   }
 }
@@ -469,7 +469,7 @@ export default {
   }
 }
 .welcome-textarea {
-  /deep/textarea {
+  ::v-deeptextarea {
     height: 93px !important;
     min-height: 93px !important;
   }

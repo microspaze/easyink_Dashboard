@@ -77,7 +77,7 @@ export default {
             height: 100%;
             display: flex;
             flex-direction: column;
-            /deep/ .el-tabs__header {
+            ::v-deep .el-tabs__header {
                 background-color: #fff;
                 margin-bottom: 0;
                 .el-tabs__nav-wrap {
@@ -88,7 +88,7 @@ export default {
                     }
                 }
             }
-            /deep/ .el-tabs__content {
+            ::v-deep .el-tabs__content {
                 flex: 1;
                 .el-tab-pane {
                     height: 100%;

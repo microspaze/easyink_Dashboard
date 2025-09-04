@@ -353,7 +353,7 @@ export default {
     .content-card {
         color: #606266;
         width: 600px;
-        /deep/ .el-card__body {
+        ::v-deep .el-card__body {
             padding-top: 22px;
         }
     }
@@ -362,7 +362,7 @@ export default {
           flex: 1;
         }
     }
-    /deep/ .el-date-editor--time {
+    ::v-deep .el-date-editor--time {
         .el-input__prefix {
             left: 2px;
         }
@@ -371,7 +371,7 @@ export default {
             padding-right: 20px;
         }
     }
-    /deep/ .el-select {
+    ::v-deep .el-select {
         .el-input__inner {
             padding-left: 8px;
             padding-right: 8px;

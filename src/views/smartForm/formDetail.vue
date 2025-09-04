@@ -777,7 +777,7 @@ export default {
   display: flex;
   align-items: center;
   .commit-time {
-    /deep/ .el-input {
+    ::v-deep .el-input {
       input {
         border-top-right-radius:0px ;
         border-bottom-right-radius: 0px;

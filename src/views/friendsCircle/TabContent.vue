@@ -269,7 +269,7 @@ export default {
   }
 }
 .push-result-wrapper {
-  /deep/ .el-table__body-wrapper .el-table__cell:nth-child(1) {
+  ::v-deep .el-table__body-wrapper .el-table__cell:nth-child(1) {
     .cell {
       line-height: 35px;
     }

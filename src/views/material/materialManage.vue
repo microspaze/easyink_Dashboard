@@ -270,7 +270,7 @@ export default {
 }
 .radio-div {
   padding: 20px 10px 0;
-  /deep/ .el-radio {
+  ::v-deep .el-radio {
     margin-bottom: 10px;
   }
   .expire-days {

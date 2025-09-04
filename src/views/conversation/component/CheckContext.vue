@@ -140,13 +140,13 @@ export default {
 </template>
 
 <style lang="scss" scoped>
-/deep/ .takecontent {
+::v-deep .takecontent {
   height: 490px;
   ul li {
     padding-left: 5px;
   }
 }
-/deep/ .el-dialog__body {
+::v-deep .el-dialog__body {
   padding: 0 15px;
 }
 .check-context-footer {

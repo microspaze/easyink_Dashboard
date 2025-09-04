@@ -464,7 +464,7 @@ export default {
     }
 
   }
-  /deep/ .show-data-wrapper {
+  ::v-deep .show-data-wrapper {
     background-color: transparent;
     padding: 0;
     display: flex;

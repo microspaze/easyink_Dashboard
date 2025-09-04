@@ -203,19 +203,19 @@ export default {
 
 <style lang="scss" scoped>
 // 隐藏上传按钮
-/deep/.uoloadSty .el-upload--picture-card{
+::v-deep.uoloadSty .el-upload--picture-card{
   width:70px !important;
   height:70px!important;
   line-height:70px;
 }
-/deep/.disUoloadSty .el-upload--picture-card{
+::v-deep.disUoloadSty .el-upload--picture-card{
   display:none;   /* 上传按钮隐藏 */
 }
-/deep/ .el-upload-list--picture-card .el-upload-list__item {
+::v-deep .el-upload-list--picture-card .el-upload-list__item {
   width: 70px;
   height: 70px;
 }
-/deep/ .el-button + .el-button {
+::v-deep .el-button + .el-button {
   margin-left: 0;
 }
 .upload-icon {
@@ -225,7 +225,7 @@ export default {
   justify-content: center;
   line-height: 23px;
   flex-direction: column;
-  /deep/ .el-icon-plus {
+  ::v-deep .el-icon-plus {
     font-size: 28px;
     color: #8c939d;
   }
@@ -234,11 +234,11 @@ export default {
   width:68px;
   height:28px;
 }
-/deep/ .el-button--small {
+::v-deep .el-button--small {
   padding:9px 9px;
 }
 .upload-drag-div {
-    /deep/ .el-upload {
+    ::v-deep .el-upload {
         width: 100%;
         .el-upload-dragger {
             width: 100%;
@@ -251,7 +251,7 @@ export default {
         color: #aaa;
         font-size: 12px;
     }
-    /deep/ .el-upload-list {
+    ::v-deep .el-upload-list {
       display: none;
     }
 }
@@ -276,7 +276,7 @@ export default {
     .icon-player {
       position: absolute;
     }
-    /deep/ .el-image {
+    ::v-deep .el-image {
       height: 60px;
       width: 60px;
     }

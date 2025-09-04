@@ -55,7 +55,7 @@ export default {
       height: 70px;
       margin: 10px 0;
       width: calc(100% - 10px);
-      /deep/ .thumb {
+      ::v-deep .thumb {
         width: 100px;
         height: 80px;
       }

@@ -95,13 +95,13 @@ export default {
 <style lang="scss" scoped>
 .video-material {
     display: flex;
-    /deep/ .el-form-item__content {
+    ::v-deep .el-form-item__content {
       display: flex;
     }
-    /deep/ .tip {
+    ::v-deep .tip {
       margin-top: 10px;
     }
-    /deep/ #myVideo {
+    ::v-deep #myVideo {
       width: 178px;
     }
   }

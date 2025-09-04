@@ -197,7 +197,7 @@ export default {
     margin-bottom: 5px;
   }
   .dep-link {
-   /deep/ .el-checkbox__label {
+   ::v-deep .el-checkbox__label {
       font-weight: initial
     }
   }

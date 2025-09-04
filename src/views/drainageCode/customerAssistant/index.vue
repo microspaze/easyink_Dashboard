@@ -354,7 +354,7 @@ export default {
   font-size: 12px;
   line-height: 20px;
 }
-/deep/ .search-form-container {
+::v-deep .search-form-container {
     margin-top: 10px;
     margin-bottom: -25px;
     position: relative;

@@ -727,16 +727,16 @@ export default {
    content:'  *';
    color:red;
   }
-  /deep/ .el-form-item:hover  {
+  ::v-deep .el-form-item:hover  {
     background: none;
   }
-  /deep/ .el-form-item {
+  ::v-deep .el-form-item {
     padding: 0;
   }
   .form-preview-item {
     background-color: #fff;
     position: relative;
-    /deep/ .el-form-item__label {
+    ::v-deep .el-form-item__label {
       line-height: 23px;
     }
     .radio-component {
@@ -748,7 +748,7 @@ export default {
           white-space: pre-line;
           display: block;
           margin-bottom: 10px;
-         /deep/ .el-radio__label {
+         ::v-deep .el-radio__label {
             margin-left: -28px;
             right: -26px;
             position: relative;
@@ -765,7 +765,7 @@ export default {
         white-space: pre-line;
         display: flex;
         align-items: flex-start;
-        /deep/ .el-checkbox__input {
+        ::v-deep .el-checkbox__input {
           margin-top: 2px;
         }
       }

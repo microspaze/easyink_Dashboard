@@ -274,19 +274,19 @@ export default {
 
 <style scoped lang="scss">
   // 隐藏全选按钮
-  /deep/ .el-table th.el-table__cell:nth-child(1) .cell {
+  ::v-deep .el-table th.el-table__cell:nth-child(1) .cell {
       visibility: hidden;
   }
 .exchange-activities {
-  /deep/ .el-dialog {
+  ::v-deep .el-dialog {
    width: auto;
   }
-  /deep/ .el-dialog__wrapper {
+  ::v-deep .el-dialog__wrapper {
     display: flex;
     align-items: center;
     justify-content: center;
   }
-  /deep/.el-dialog__body {
+  ::v-deep.el-dialog__body {
     padding: 6px 20px;
   }
   .footer {

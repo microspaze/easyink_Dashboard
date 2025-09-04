@@ -732,7 +732,7 @@ export default {
   }
   .role-right {
     flex: 1;
-    /deep/ .el-form {
+    ::v-deep .el-form {
       height: 100%;
       display: flex;
       flex-direction: column;
@@ -741,13 +741,13 @@ export default {
       padding: 10px;
       background-color: #fff;
       margin-bottom: 20px;
-      /deep/.el-form-item:nth-of-type(1) {
+      ::v-deep.el-form-item:nth-of-type(1) {
         .el-input {
           width: 300px;
         }
       }
       .data-scope-div {
-        /deep/ .el-form-item__content {
+        ::v-deep .el-form-item__content {
           display: flex;
           align-items: baseline;
           .select-tree-div {
@@ -770,18 +770,18 @@ export default {
         padding: 20px;
       }
       .tree-table {
-        /deep/ .el-table__body {
+        ::v-deep .el-table__body {
           width: 100% !important;
         }
-        /deep/.cell {
+        ::v-deep.cell {
           padding-left: 20px;
           padding-right: 20px;
         }
-        /deep/ .el-table__body-wrapper {
+        ::v-deep .el-table__body-wrapper {
           height: calc(100% - 40px);
         }
       }
-      /deep/.el-table__body {
+      ::v-deep.el-table__body {
         border-spacing: 0;
         .el-table__row {
           box-shadow: none;
@@ -797,10 +797,10 @@ export default {
       box-shadow: 0px 0px 4px 0px rgba(198, 198, 198, 0.3);
       display: flex;
       justify-content: center;
-      /deep/ .el-form-item__label {
+      ::v-deep .el-form-item__label {
         display: none;
       }
-      /deep/ .el-form-item__content {
+      ::v-deep .el-form-item__content {
         margin: 0 !important;
         button {
           width: 68px;

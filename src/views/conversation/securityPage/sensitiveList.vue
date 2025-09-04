@@ -340,11 +340,11 @@ export default {
   }
 }
 .noborder {
-  /deep/ .el-input--mini .el-input__inner {
+  ::v-deep .el-input--mini .el-input__inner {
     width: 2px;
     border: none;
   }
-  /deep/ input {
+  ::v-deep input {
     padding-left: 17px;
     padding-right: 17px;
   }
@@ -358,17 +358,17 @@ export default {
   height: calc(100% - 55px);
   display: flex;
   flex-direction: column;
-  /deep/ .el-tabs__header {
+  ::v-deep .el-tabs__header {
     margin-bottom: 0;
     height: 40px;
   }
-  /deep/ .el-tabs__content {
+  ::v-deep .el-tabs__content {
     flex: 1;
     .el-tab-pane {
       height: 100%;
     }
   }
-  /deep/ .el-tabs__nav-wrap::after {
+  ::v-deep .el-tabs__nav-wrap::after {
     height: 0;
   }
   .user-item {
@@ -390,7 +390,7 @@ export default {
     display: flex;
     align-items: center;
   }
-  /deep/ .show-data-wrapper {
+  ::v-deep .show-data-wrapper {
     padding-top: 0;
     overflow: auto;
   }

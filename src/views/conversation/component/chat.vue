@@ -473,7 +473,7 @@ export default {
     .msgtypeimg {
       height: 80px;
       margin-top: 10px;
-      /deep/ .thumb {
+      ::v-deep .thumb {
         width: 100px;
         height: 80px;
       }

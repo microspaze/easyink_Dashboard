@@ -85,12 +85,12 @@ export default {
   }
   .content {
       color: $black;
-    /deep/ .el-link {
+    ::v-deep .el-link {
       vertical-align: inherit;
       color: #409eff;
     }
   }
-  /deep/ .el-tabs__content {
+  ::v-deep .el-tabs__content {
     padding: 0 5px;
     overflow: auto;
     height: 100%;

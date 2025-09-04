@@ -545,7 +545,7 @@ export default {
 </template>
 
 <style lang="scss" scoped>
-/deep/ .el-tag:nth-of-type(1) {
+::v-deep .el-tag:nth-of-type(1) {
   margin-right: 0px;
 }
 .material-main-page {
@@ -563,7 +563,7 @@ export default {
     overflow: auto;
     display: flex;
     flex-direction: column;
-    /deep/ .pagination-container {
+    ::v-deep .pagination-container {
       padding-right: 15px;
     }
     .operate-container {

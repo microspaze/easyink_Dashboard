@@ -1,5 +1,7 @@
 // cover some element-ui styles
-@import '~@/styles/mixin.scss';
+@use 'mixin.scss';
+@use "variables";
+
 .el-button {
   [class^='el-icon-'],
   [class*=' el-icon-'] {
@@ -164,13 +166,13 @@
 .el-button--primary,
 .el-button--primary:hover,
 .el-button--primary:focus {
-  @include btn_color($color-theme2-1);
+  @include mixin.btn_color(variables.$color-theme2-1);
 }
 
 .el-button.is-plain,
 .el-button.is-plain:hover,
 .el-button--default:hover {
-  @include btn_reset_color($color-theme2-1);
+  @include mixin.btn_reset_color(variables.$color-theme2-1);
 }
 
 .el-button--text,
@@ -178,7 +180,7 @@
 .el-radio-button:not(.is-active) .el-radio-button__inner:hover,
 .el-transfer-panel__item.el-checkbox:hover,
 .el-upload:focus {
-  @include text_btn_color($color-theme2-1);
+  @include mixin.text_btn_color(variables.$color-theme2-1);
 }
 
 .el-radio-button__orig-radio:checked + .el-radio-button__inner:hover,
@@ -193,7 +195,7 @@
   border-color: #d9d9d9;
   &:focus,
   &:hover {
-    @include border_color();
+    @include mixin.border_color();
   }
 }
 
@@ -238,11 +240,11 @@
 .el-step__title.is-process,
 .el-step__head.is-process,
 .el-step__description.is-process {
-  @include step_label_color($color-theme2-1);
+  @include mixin.step_label_color(variables.$color-theme2-1);
 }
 .el-step__head.is-process,
 .el-step__head.is-success {
-  @include border_color();
+  @include mixin.border_color();
 }
 
 .el-table .cell.el-tooltip {
@@ -334,10 +336,10 @@
 .theme-el-alert {
     border-color: #c4e1dd;
     color: #7f7f7f !important;
-    background-color: $bgLightBaseColor !important;
+    background-color: variables.$bgLightBaseColor !important;
     margin: -15px 0 15px;
   .el-icon-info, .el-icon-warning {
-    color: $baseColor !important;
+    color: variables.$baseColor !important;
   }
   .el-icon-info {
     transform: rotateZ(-15deg);
@@ -397,51 +399,51 @@
 
 .el-checkbox__input.is-checked .el-checkbox__inner,
 .el-checkbox__input.is-indeterminate .el-checkbox__inner {
-  @include radio_btn_color($color-theme2-1);
+  @include mixin.radio_btn_color(variables.$color-theme2-1);
 }
 .el-checkbox__input.is-checked + .el-checkbox__label {
-  @include radio_label_color($color-theme2-1);
+  @include mixin.radio_label_color(variables.$color-theme2-1);
 }
 
 .el-tabs__item.is-active {
-  @include text_btn_color($color-theme2-1);
+  @include mixin.text_btn_color(variables.$color-theme2-1);
 }
 .el-tabs__active-bar {
-  @include tab_bg_color($color-theme2-1);
+  @include mixin.tab_bg_color(variables.$color-theme2-1);
 }
 
 .el-tabs__item:hover,
 .el-pagination.is-background .el-pager li:not(.active):hover,
 .el-select-dropdown__item.selected,
 .el-dialog__headerbtn .el-dialog__close:hover {
-  @include text_btn_color($color-theme2-1);
+  @include mixin.text_btn_color(variables.$color-theme2-1);
 }
 
 .el-pagination.is-background .el-pager li:not(.disabled).active {
-  @include bg_primary_color($color-theme2-1);
+  @include mixin.bg_primary_color(variables.$color-theme2-1);
 }
 
 .el-dropdown-menu__item {
   &:hover {
-    @include list_item_hover_color($color-theme2-4);
-    @include text_btn_color($color-theme2-2);
+    @include mixin.list_item_hover_color(variables.$color-theme2-4);
+    @include mixin.text_btn_color(variables.$color-theme2-2);
   }
 }
 
 .el-switch.is-checked .el-switch__core {
-  @include btn_color($color-theme2-1);
+  @include mixin.btn_color(variables.$color-theme2-1);
 }
 
 .el-radio-button__orig-radio:checked + .el-radio-button__inner {
-  @include radio_btn_color($color-theme2-1);
+  @include mixin.radio_btn_color(variables.$color-theme2-1);
 }
 
 .el-radio {
   .el-radio__input.is-checked .el-radio__inner {
-    @include radio_btn_color($color-theme2-1);
+    @include mixin.radio_btn_color(variables.$color-theme2-1);
   }
   .el-radio__input.is-checked + .el-radio__label {
-    @include radio_label_color($color-theme2-1);
+    @include mixin.radio_label_color(variables.$color-theme2-1);
   }
 }
 
@@ -449,11 +451,11 @@
 .el-step__title.is-finish,
 .el-step__description.is-finish,
 .el-step__head.is-finish {
-  @include text_btn_color($color-theme2-2);
-  @include border_color($color-theme2-2);
+  @include mixin.text_btn_color(variables.$color-theme2-2);
+  @include mixin.border_color(variables.$color-theme2-2);
 }
 .el-link.el-link--default:hover {
-  @include text_btn_color($color-theme2-1);
+  @include mixin.text_btn_color(variables.$color-theme2-1);
 }
 
 // 超链接颜色
