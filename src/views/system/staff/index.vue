@@ -484,7 +484,7 @@ export default {
             clearable
             size="small"
             style="width: 240px"
-            @keyup.enter.native="handleQuery"
+            @keyup.enter.native="getList(1)"
           />
         </el-form-item>
         <el-form-item prop="roleId" class="new-form-item">
