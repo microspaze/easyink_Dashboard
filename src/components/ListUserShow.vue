@@ -5,7 +5,7 @@
 -->
 
 <template>
-  <div class="aic" style="flex-wrap: wrap;">
+  <div class="aic" style="flex-wrap: wrap;height: 120px;overflow: hidden;">
     <div v-for="(userItem,userIndex) of useUserName ? splitBySign(useUserName,',') : []" :key="userIndex">
       <span>{{ userItem }}</span>
       <span v-if="userIndex !== splitBySign(useUserName,',').length - 1 || splitBySign(departmentName,',').length !== 0">、</span>
