@@ -98,6 +98,7 @@
                   <div class="info">
                     <p>累计添加客户：截止到查询时间，累计通过渠道添加员工的客户数</p>
                     <p>留存客户总数：截止到查询时间，未将员工删除的客户数</p>
+                    <p>重复客户数：查询时间内，重复添加客户数</p>
                     <p>新增客户数：查询时间内，通过渠道添加员工的客户数，包含流失客户</p>
                     <p>流失客户数：查询时间内，把员工删除的客户数</p>
                     <p>新客留存率：截止当前，未将员工删除的新增客户/新增客户数</p>
@@ -276,6 +277,11 @@ export default {
           retainCustomerCnt: 0,
           title: '留存客户总数',
           filed: 'retainCustomerCnt'
+        },
+        {
+          duplicateCustomerCnt: 0,
+          title: '重复客户数',
+          filed: 'duplicateCustomerCnt'
         },
         {
           newCustomerCnt: 0,
