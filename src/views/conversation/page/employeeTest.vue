@@ -192,7 +192,7 @@
                   </el-table-column>
                   <el-table-column prop="action" label="操作">
                     <template slot-scope="scope">
-                      <el-button type="text" size="small" @click="download(scope.row)">下载</el-button>
+                      <el-button v-if="scope.row" type="text" size="small" @click="download(scope.row)">下载</el-button>
                     </template>
                   </el-table-column>
                 </el-table>
@@ -238,7 +238,7 @@
                     </template>
                   </el-table-column>
                   <el-table-column prop="name" label="通话时间">
-                    <template v-if="scope.row.msgtime" slot-scope="scope">
+                    <template v-if="scope.row.msgtime || scope.row.msgTime" slot-scope="scope">
                       {{ parseTime(scope.row.msgtime || scope.row.msgTime) }}
                     </template>
                   </el-table-column>
@@ -249,7 +249,7 @@
                   </el-table-column>
                   <el-table-column prop="address" label="操作">
                     <template slot-scope="scope">
-                      <el-button type="text" size="small" @click="voiceLook(scope.row.voice)">下载</el-button>
+                      <el-button v-if="scope.row.voice.attachment" type="text" size="small" @click="voiceLook(scope.row.voice)">下载</el-button>
                     </template>
                   </el-table-column>
                 </el-table>

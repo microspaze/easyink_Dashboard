@@ -47,8 +47,8 @@
               </div>
             </Message>
             <Message v-else-if="item.msgType=='voice'" :is-revoke="item.isRevoke" class="msgtypevoice">
-              <img v-if="voicePlayObj[item.msgId] && voicePlayObj[item.msgId].isPlaying" :src="dealVoiceImg(true, item)" @click="pauseVideo(item)">
-              <img v-else :src="dealVoiceImg(false, item)" @click="playVideo(item)">
+              <img v-if="voicePlayObj[item.msgId] && voicePlayObj[item.msgId].isPlaying" :src="dealVoiceImg(true, item)" @click="pauseVoice(item)">
+              <img v-else :src="dealVoiceImg(false, item)" @click="playVoice(item)">
             </Message>
             <Message v-else-if="item.msgType=='emotion'" :is-revoke="item.isRevoke" class="msgtypeimg">
               <ImgChatItem :img-url="item.emotion.attachment" />
@@ -205,8 +205,13 @@ export default {
   },
   mounted() {},
   methods: {
-    playVideo(msg) {
-      this.urlToBlob(msg.voice.attachment, msg);
+    playVoice(msg) {
+      const attachment = msg.voice.attachment;
+      if (attachment) {
+        this.urlToBlob(msg.voice.attachment, msg);
+      } else {
+        this.msgError('文件不存在！');
+      }
     },
     /**
      * @description 初始化滚动条
@@ -289,7 +294,7 @@ export default {
         });
       }
     },
-    pauseVideo(msg) {
+    pauseVoice(msg) {
       const msgId = msg.msgId;
       const amr = this.voicePlayObj[msgId].amr;
       amr.pause();

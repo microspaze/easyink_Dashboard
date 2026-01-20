@@ -211,7 +211,7 @@
                   </el-table-column>
                   <el-table-column prop="action" label="操作">
                     <template slot-scope="scope">
-                      <el-button type="text" size="small" @click="download(scope.row)">下载</el-button>
+                      <el-button v-if="scope.row" type="text" size="small" @click="download(scope.row)">下载</el-button>
                       <!-- <el-button type="text" size="small">查看</el-button> -->
                     </template>
                   </el-table-column>
@@ -277,7 +277,7 @@
                   </el-table-column>
                   <el-table-column prop="address" label="操作">
                     <template slot-scope="scope">
-                      <el-button type="text" size="small" @click="voiceLook(scope.row.voice)">查看</el-button>
+                      <el-button v-if="scope.row.voice" type="text" size="small" @click="voiceLook(scope.row.voice)">查看</el-button>
                     </template>
                   </el-table-column>
                 </el-table>

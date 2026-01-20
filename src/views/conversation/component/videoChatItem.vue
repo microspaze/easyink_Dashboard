@@ -34,8 +34,12 @@ export default {
   mounted() {},
   methods: {
     play(url) {
-      this.dia = true;
-      this.$refs.videoModal.play(url);
+      if (url) {
+        this.dia = true;
+        this.$refs.videoModal.play(url);
+      } else {
+        this.msgError('文件不存在！');
+      }
     },
     /**
      * 关闭弹窗

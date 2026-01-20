@@ -6,7 +6,7 @@
 <template>
   <div class="voice-item">
     <img v-if="voicePlayObj[item.msgId] && voicePlayObj[item.msgId].isPlaying" :src="dealVoiceImg(true)" @click="pauseVoice(item)">
-    <img v-else :src="dealVoiceImg(false)" @click="playVocie(item)">
+    <img v-else :src="dealVoiceImg(false)" @click="playVoice(item)">
   </div>
 </template>
 
@@ -36,8 +36,13 @@ export default {
         return require('@/assets/image/voice-left.png');
       }
     },
-    playVocie(msg) {
-      this.urlToBlob(msg.voice.attachment, msg);
+    playVoice(msg) {
+      const attachment = msg.voice.attachment;
+      if (attachment) {
+        this.urlToBlob(attachment, msg);
+      } else {
+        this.msgError('文件不存在！');
+      }
     },
     pauseVoice(msg) {
       const msgId = msg.msgId;
