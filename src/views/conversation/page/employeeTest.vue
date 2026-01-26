@@ -242,14 +242,14 @@
                       {{ parseTime(scope.row.msgtime || scope.row.msgTime) }}
                     </template>
                   </el-table-column>
-                  <el-table-column prop="address" label="时长">
+                  <el-table-column prop="detail" label="详情" width="360">
                     <template v-if="scope.row.voice" slot-scope="scope">
-                      {{ (scope.row.voice.play_length || scope.row.voice.playLength) }}s
+                      <VoiceChatItem :item="scope.row" />
                     </template>
                   </el-table-column>
-                  <el-table-column prop="address" label="操作">
+                  <el-table-column prop="address" label="操作" fixed="right" width="80">
                     <template slot-scope="scope">
-                      <el-button v-if="scope.row.voice.attachment" type="text" size="small" @click="voiceLook(scope.row.voice)">下载</el-button>
+                      <el-button v-if="scope.row.voice && scope.row.voice.attachment" type="text" size="small" @click="voiceLook(scope.row.voice)">下载</el-button>
                     </template>
                   </el-table-column>
                 </el-table>
@@ -267,6 +267,7 @@ import list from '../component/list.vue';
 import chat from '../component/chat.vue';
 import insideList from '../component/insideList.vue';
 import grouplist from '../component/groupList.vue';
+import VoiceChatItem from '../component/voiceChatItem.vue';
 import UserTree from '@/components/SelectUser/UserTree.vue';
 import moment from 'moment';
 import {
@@ -307,6 +308,7 @@ export default {
     grouplist,
     insideList,
     chat,
+    VoiceChatItem,
     UserTree,
     EmptyDefaultIcon,
     DatePicker

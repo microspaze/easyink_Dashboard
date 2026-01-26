@@ -4,7 +4,15 @@
  * @LastEditors: broccoli
 -->
 <template>
-  <div class="voice-item">
+  <div class="voice-item" style="display:flex;align-items:center;">
+    <p style="display:flex; align-items: center;">
+      <el-slider v-model="progress" style="width:150px;" :min="0" :max="item.voice.play_length" :step="0.1" :disabled="voicePlayObj[item.msgId] && voicePlayObj[item.msgId].isPlaying" @change="progressChange" />
+      <label for="amr-progress" style="margin:0 10px;min-width:70px;text-align: center;">
+        <span class="amr-cur">{{ progress }}'</span>
+        <span> / </span>
+        <span class="amr-duration">{{ item.voice.play_length }}'</span>
+      </label>
+    </p>
     <img v-if="voicePlayObj[item.msgId] && voicePlayObj[item.msgId].isPlaying" :src="dealVoiceImg(true)" @click="pauseVoice(item)">
     <img v-else :src="dealVoiceImg(false)" @click="playVoice(item)">
   </div>
@@ -15,6 +23,8 @@ import 'video.js/dist/video-js.css';
 import 'vue-video-player/src/custom-theme.css';
 import BenzAMRRecorder from 'benz-amr-recorder';
 
+const PROGRESS_UPDATE_INTERVAL = 100;
+
 export default {
   props: {
     item: {
@@ -24,6 +34,7 @@ export default {
   },
   data() {
     return {
+      progress: 0,
       voicePlayObj: {}
     };
   },
@@ -67,9 +78,17 @@ export default {
       };
       xhr.send();
     },
+    progressChange(value) {
+      const this_ = this;
+      this_.progress = value;
+    },
     playOrResumeAudio(file, msg) {
       const this_ = this;
       const msgId = msg.msgId;
+      if (this_.progress >= msg.voice.play_length) {
+        this_.progress = 0;
+        this_.changeMsgVoiceStatus(msgId, false);
+      }
 
       // 第一次点击语音
       if (!this.voicePlayObj[msgId]) {
@@ -79,8 +98,12 @@ export default {
             this_.voicePlayObj[msgId] = {};
             this_.voicePlayObj[msgId].amr = amr;
             amr.play();
+            setInterval(function() {
+              if (amr.isPlaying()) {
+                this_.progress = Number.parseFloat(amr.getCurrentPosition().toFixed(1));
+              }
+            }, PROGRESS_UPDATE_INTERVAL);
             this_.changeMsgVoiceStatus(msgId, true);
-
             amr.onEnded(function() {
               this_.changeMsgVoiceStatus(msgId, false);
             });
@@ -90,6 +113,9 @@ export default {
         }
       } else {
         const amr = this_.voicePlayObj[msgId].amr;
+        if (this_.progress) {
+          amr.setPosition(this_.progress);
+        }
         amr.playOrResume();
         this_.changeMsgVoiceStatus(msgId, true);
         amr.onEnded(function() {

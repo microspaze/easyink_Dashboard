@@ -47,8 +47,7 @@
               </div>
             </Message>
             <Message v-else-if="item.msgType=='voice'" :is-revoke="item.isRevoke" class="msgtypevoice">
-              <img v-if="voicePlayObj[item.msgId] && voicePlayObj[item.msgId].isPlaying" :src="dealVoiceImg(true, item)" @click="pauseVoice(item)">
-              <img v-else :src="dealVoiceImg(false, item)" @click="playVoice(item)">
+              <VoiceChatItem :item="item" />
             </Message>
             <Message v-else-if="item.msgType=='emotion'" :is-revoke="item.isRevoke" class="msgtypeimg">
               <ImgChatItem :img-url="item.emotion.attachment" />
@@ -162,6 +161,7 @@ import {
 } from '@/utils/common.js';
 import ImgChatItem from './imgChatItem.vue';
 import MixedList from './mixedList.vue';
+import VoiceChatItem from './voiceChatItem.vue';
 import VideoChatItem from './videoChatItem.vue';
 import Message from './message.vue';
 import EmptyDefaultIcon from '@/components/EmptyDefaultIcon';
@@ -174,6 +174,7 @@ export default {
   components: {
     MixedList,
     ImgChatItem,
+    VoiceChatItem,
     VideoChatItem,
     Message,
     EmptyDefaultIcon
