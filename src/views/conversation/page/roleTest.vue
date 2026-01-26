@@ -14,6 +14,11 @@
               <el-input v-model="form.Scontent" placeholder="请输入聊天内容" style="width:240px" />
             </el-form-item>
             <el-form-item>
+              <el-select v-model="form.MsgType" placeholder="请选择消息类型" style="width:240px">
+                <el-option v-for="item in msgTypeOptions" :key="item.value" :label="item.label" :value="item.value" />
+              </el-select>
+            </el-form-item>
+            <el-form-item>
               <DatePicker
                 :default-time="['00:00:00', '23:59:59']"
                 style="width:240px"
@@ -159,6 +164,7 @@ export default {
         Ename: '',
         Cname: '',
         Scontent: '',
+        MsgType: '',
         Stime: [moment().subtract(1, 'month').format('YYYY-MM-DD 00:00:00'), moment().format('YYYY-MM-DD 23:59:59')]
       },
       currentPage: 1,
@@ -183,6 +189,36 @@ export default {
         //   value: "switch",
         //   label: "切回企业日志"
         // }
+      ],
+      msgTypeOptions: [
+        {
+          value: '',
+          label: '所有消息类型'
+        },
+        {
+          value: 'text',
+          label: '文本消息'
+        },
+        {
+          value: 'image',
+          label: '图片消息'
+        },
+        {
+          value: 'voice',
+          label: '语音消息'
+        },
+        {
+          value: 'video',
+          label: '视频消息'
+        },
+        {
+          value: 'file',
+          label: '文件消息'
+        },
+        {
+          value: 'link',
+          label: '链接消息'
+        }
       ],
       // eslint-disable-next-line no-magic-numbers
       searchHeight: 120,
@@ -269,6 +305,7 @@ export default {
         fromName: this.form.Ename,
         receiveName: this.form.Cname,
         keyWord: this.form.Scontent,
+        msgType: this.form.MsgType,
         beginTime: this.form.Stime ? this.parseTime(this.form.Stime[0]) : '',
         endTime: this.form.Stime ? this.parseTime(this.form.Stime[1]) : '',
         pageNum: this.currentPage,
