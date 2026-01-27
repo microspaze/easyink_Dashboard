@@ -208,6 +208,10 @@ export default {
           label: '语音消息'
         },
         {
+          value: 'meeting_voice_call',
+          label: '语音通话'
+        },
+        {
           value: 'video',
           label: '视频消息'
         },

@@ -24,7 +24,7 @@
       <div v-else-if="item.msgType=='video'" class="msgtype-video">
         <VideoChatItem :url="item.video.attachment" />
       </div>
-      <div v-else-if="item.msgType=='voice'" class="msgtype-voice">
+      <div v-else-if="item.msgType=='voice' || item.msgType=='meeting_voice_call'" class="msgtype-voice">
         <VoiceChatItem :item="item" />
       </div>
       <div v-else-if="item.msgType=='file'" class="msgtype-file">

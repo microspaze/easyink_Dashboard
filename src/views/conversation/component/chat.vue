@@ -46,7 +46,7 @@
                 {{ item.file.filename || item.file.fileName }}
               </div>
             </Message>
-            <Message v-else-if="item.msgType=='voice'" :is-revoke="item.isRevoke" class="msgtypevoice">
+            <Message v-else-if="item.msgType=='voice' || item.msgType=='meeting_voice_call'" :is-revoke="item.isRevoke" class="msgtypevoice">
               <VoiceChatItem :item="item" />
             </Message>
             <Message v-else-if="item.msgType=='emotion'" :is-revoke="item.isRevoke" class="msgtypeimg">
