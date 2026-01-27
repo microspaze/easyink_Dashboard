@@ -5,8 +5,8 @@
 -->
 <template>
   <div class="voice-item" style="display:flex;align-items:center;">
-    <div v-if="item.msgType=='voice'" style="display:flex;align-items:center;">
-      <el-slider v-model="progress" style="width:150px;" :min="0" :max="item.voice.play_length" :step="0.1" :disabled="voicePlayObj[item.msgId] && voicePlayObj[item.msgId].isPlaying" @change="progressChange" />
+    <div v-if="item.msgType=='voice'" style="display:flex;align-items:center;margin-left:10px">
+      <el-slider v-model="progress" style="width:175px;" :min="0" :max="item.voice.play_length" :step="0.1" :disabled="voicePlayObj[item.msgId] && voicePlayObj[item.msgId].isPlaying" @change="progressChange" />
       <label for="amr-progress" style="margin:0 10px;min-width:70px;text-align: center;">
         <span class="amr-cur">{{ progress }}'</span>
         <span> / </span>
@@ -15,7 +15,7 @@
       <img v-if="voicePlayObj[item.msgId] && voicePlayObj[item.msgId].isPlaying" :src="dealVoiceImg(true)" @click="pauseVoice(item)">
       <img v-else :src="dealVoiceImg(false)" @click="playVoice(item)">
     </div>
-    <div v-if="item.msgType=='meeting_voice_call'" style="display:flex;align-items:center;height:40px;">
+    <div v-if="item.msgType=='meeting_voice_call'" style="display:flex;align-items:center;height:40px;overflow:hidden;">
       <audio controls :src="item.meetingVoiceCall.attachment" type="audio/mpeg" />
     </div>
   </div>

@@ -243,13 +243,14 @@
                     </template>
                   </el-table-column>
                   <el-table-column prop="detail" label="详情" width="360">
-                    <template v-if="scope.row.voice" slot-scope="scope">
+                    <template v-if="scope.row.voice || scope.row.meetingVoiceCall" slot-scope="scope">
                       <VoiceChatItem :item="scope.row" />
                     </template>
                   </el-table-column>
                   <el-table-column prop="address" label="操作" fixed="right" width="80">
                     <template slot-scope="scope">
                       <el-button v-if="scope.row.voice && scope.row.voice.attachment" type="text" size="small" @click="voiceLook(scope.row.voice)">下载</el-button>
+                      <el-button v-if="scope.row.meetingVoiceCall && scope.row.meetingVoiceCall.attachment" type="text" size="small" @click="voiceLook(scope.row.meetingVoiceCall)">下载</el-button>
                     </template>
                   </el-table-column>
                 </el-table>
