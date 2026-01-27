@@ -27,6 +27,7 @@ import 'vue-video-player/src/custom-theme.css';
 import BenzAMRRecorder from 'benz-amr-recorder';
 
 const PROGRESS_UPDATE_INTERVAL = 100;
+const PROGRESS_DELTA_DURATION = 0.1;
 
 export default {
   props: {
@@ -88,7 +89,7 @@ export default {
     playOrResumeAudio(file, msg) {
       const this_ = this;
       const msgId = msg.msgId;
-      if (this_.progress >= msg.voice.play_length) {
+      if (this_.progress + PROGRESS_DELTA_DURATION >= msg.voice.play_length) {
         this_.progress = 0;
         this_.changeMsgVoiceStatus(msgId, false);
       }
