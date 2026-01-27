@@ -6,7 +6,8 @@
 <template>
   <div>
     <div class="video-item">
-      <i class="el-icon-video-play" @click="play(url,'video')" />
+      <span class="video-item-duration">{{ item.video.play_length }}'</span>
+      <i class="el-icon-video-play" @click="play(item.video.attachment,'video')" />
     </div>
     <VideoModal v-show="dia" ref="videoModal" @closeModal="closeModal" />
   </div>
@@ -21,8 +22,8 @@ import VideoModal from './videoModal.vue';
 export default {
   components: { VideoModal },
   props: {
-    url: {
-      type: String,
+    item: {
+      type: Object,
       default: () => {}
     }
   },
@@ -46,6 +47,7 @@ export default {
      */
     closeModal() {
       this.dia = false;
+      this.$refs.videoModal.pause();
     }
   }
 };
@@ -53,10 +55,13 @@ export default {
 </script>
 <style lang="scss" scoped>
 .video-item {
+  display: flex;
+  align-items: center;
   .el-icon-video-play {
     font-size: 40px;
     color: #199ed8;
     cursor: pointer;
+    margin-left: 10px;
   }
 }
 </style>

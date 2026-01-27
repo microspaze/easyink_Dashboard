@@ -275,7 +275,7 @@ import {
   content
 } from '@/api/content.js';
 import {
-  yearMouthDay, downloadFile, filterSize, downloadAMR
+  yearMouthDay, downloadFile, filterSize
 } from '@/utils/common.js';
 import { DATE_DISABLED_TYPE, PAGE_LIMIT_TWENTY, DEFAULT_PAGE_NUM, PAGE_LIMIT, MSG_TYPE, MSG_TYPE_ALL, MSG_TYPE_IMG, MSG_TYPE_FILE, MSG_TYPE_LINK, MSG_TYPE_VOICE, MSG_TYPE_VIDEO } from '@/utils/constant/index';
 import EmptyDefaultIcon from '@/components/EmptyDefaultIcon.vue';
@@ -373,7 +373,7 @@ export default {
   methods: {
     filterSize,
     voiceLook(e) {
-      downloadAMR(e.attachment);
+      downloadFile(e.attachment);
     },
     download(e) {
       downloadFile(e.file.attachment, e.file.fileName || e.file.filename);

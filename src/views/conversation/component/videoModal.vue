@@ -59,6 +59,10 @@ export default {
       const player = this.$refs.videoPlayer.player;
       player.play();
     },
+    pause() {
+      const player = this.$refs.videoPlayer.player;
+      player.pause();
+    },
     closeModal() {
       this.$emit('closeModal');
     }

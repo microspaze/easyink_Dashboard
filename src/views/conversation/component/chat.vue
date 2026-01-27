@@ -53,7 +53,7 @@
               <ImgChatItem :img-url="item.emotion.attachment" />
             </Message>
             <Message v-else-if="item.msgType=='video'" :is-revoke="item.isRevoke" class="msgtypevideo">
-              <VideoChatItem :url="item.video.attachment" />
+              <VideoChatItem :item="item" />
             </Message>
             <Message v-else-if="item.msgType=='location'" :is-revoke="item.isRevoke" class="msg-type-location">
               <div class="msgtypecard">

@@ -22,7 +22,7 @@
         <ImgChatItem :img-url="item.image.attachment" />
       </div>
       <div v-else-if="item.msgType=='video'" class="msgtype-video">
-        <VideoChatItem :url="item.video.attachment" />
+        <VideoChatItem :item="item" />
       </div>
       <div v-else-if="item.msgType=='voice' || item.msgType=='meeting_voice_call'" class="msgtype-voice">
         <VoiceChatItem :item="item" />
