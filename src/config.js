@@ -16,7 +16,9 @@ window.CONFIG = {
   services: {
     wecom: '/wecom',
     common: '/common',
-    wechatopen: '/wechatopen'
+    wechatopen: '/wechatopen',
+    wechatextra: '/wechatextra',
+    wechathost: 'https://vip.gatime.cn'
   },
 
   /**

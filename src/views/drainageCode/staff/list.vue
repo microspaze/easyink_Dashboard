@@ -177,7 +177,7 @@ export default {
         return;
       }
       this.loading = true;
-      getApplink({ id: row.id }).then(resp => {
+      getApplink({ id: row.id, qrcode: row.qrCode }).then(resp => {
         if (resp.data) {
           this.list.forEach(item => {
             if (item.id === row.id) {
@@ -325,7 +325,7 @@ export default {
                 <el-button
                   type="text"
                   @click="download(row.id, row.useUserName, row.scenario)"
-                >下载</el-button>
+                >下载二维码</el-button>
                 <el-button
                   v-copy="row.qrCode"
                   type="text"
@@ -335,7 +335,7 @@ export default {
                   type="text"
                   class="copy-btn"
                   @click="getLink(row)"
-                >复制小程序链接</el-button>
+                >复制去重链接</el-button>
               </div>
             </template>
           </el-table-column>

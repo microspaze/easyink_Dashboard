@@ -282,6 +282,13 @@ export default {
       this.loading = true;
       getList(this.query)
         .then(({ rows, total }) => {
+          const wechathost = window.CONFIG.services.wechathost;
+          if (wechathost && rows) {
+            rows.forEach(item => {
+              item.qrCode = item.qrCode.replace('https://work.weixin.qq.com/ca/', wechathost + '/weixin/assistantLink?id=')
+                .replace('?customer_channel=', '&channel=');
+            });
+          }
           this.list = rows;
           this.total = +total;
           this.ids = [];

@@ -1,5 +1,6 @@
 import request from '@/utils/request';
 const service = window.CONFIG.services.wecom + '/code';
+const wechatextra = window.CONFIG.services.wechatextra;
 
 /**
  * 获取员工活码列表
@@ -191,8 +192,22 @@ export function getUserByEmplyCode(id) {
  * @param {*} params
  */
 export function getApplink(params) {
+  if (wechatextra) {
+    return getWxcodelink(params);
+  }
   return request({
     url: service + '/appLink',
+    params
+  });
+}
+
+/**
+ * 根据id获取员工活码去重链接
+ * @param {*} params
+ */
+export function getWxcodelink(params) {
+  return request({
+    url: wechatextra + '/weixin/getWxCodeLink',
     params
   });
 }
