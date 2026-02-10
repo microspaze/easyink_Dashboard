@@ -155,6 +155,13 @@ export function download(id) {
   });
 }
 
+export function downloadUrl(url) {
+  return request({
+    url: url,
+    responseType: 'blob'
+  });
+}
+
 /**
  * 成员添加客户统计
  * @param {*} params

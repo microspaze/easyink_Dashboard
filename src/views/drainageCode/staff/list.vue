@@ -3,6 +3,7 @@ import {
   getList,
   remove,
   downloadBatch,
+  downloadUrl,
   download,
   getApplink
 } from '@/api/drainageCode/staff';
@@ -130,6 +131,20 @@ export default {
         }
       });
     },
+    downloadQrcode(qrcode, scenario, userName) {
+      const name = scenario + '-' + userName + '.png';
+      downloadUrl(qrcode).then((res) => {
+        if (res != null) {
+          const blob = new Blob([res], { type: 'application/zip' });
+          const url = window.URL.createObjectURL(blob);
+          const link = document.createElement('a'); // 创建a标签
+          link.href = url;
+          link.download = name; // 重命名文件
+          link.click();
+          URL.revokeObjectURL(url); // 释放内存
+        }
+      });
+    },
     /** 下载 */
     downloadBatch(qrCode) {
       if (!this.ids.length) {
@@ -182,9 +197,37 @@ export default {
           this.list.forEach(item => {
             if (item.id === row.id) {
               item.appLink = resp.data;
+              item.appQrcode = resp.qrcode;
+              if (item.appQrcode) {
+                item.qrCode = item.appQrcode;
+              }
             }
           });
           copyText(resp.data);
+        }
+        this.loading = false;
+      }).catch(() => {
+        this.loading = false;
+      });
+    },
+    getLinkQrcode(row) {
+      if (row.appQrcode) {
+        this.downloadQrcode(row.appQrcode, row.scenario, row.createBy);
+        return;
+      }
+      this.loading = true;
+      getApplink({ id: row.id, qrcode: row.qrCode }).then(resp => {
+        if (resp.data) {
+          this.list.forEach(item => {
+            if (item.id === row.id) {
+              item.appLink = resp.data;
+              item.appQrcode = resp.qrcode;
+              if (item.appQrcode) {
+                item.qrCode = item.appQrcode;
+              }
+            }
+          });
+          this.downloadQrcode(resp.qrcode, row.scenario, row.createBy);
         }
         this.loading = false;
       }).catch(() => {
@@ -285,6 +328,7 @@ export default {
           @click="remove()"
         >批量删除</el-button>
         <el-button
+          v-if="false"
           type="reset"
           class="btn-reset"
           size="mini"
@@ -323,10 +367,12 @@ export default {
               </div>
               <div class="code-right">
                 <el-button
+                  v-if="false"
                   type="text"
                   @click="download(row.id, row.useUserName, row.scenario)"
                 >下载二维码</el-button>
                 <el-button
+                  v-if="false"
                   v-copy="row.qrCode"
                   type="text"
                   class="copy-btn"
@@ -336,6 +382,11 @@ export default {
                   class="copy-btn"
                   @click="getLink(row)"
                 >复制去重链接</el-button>
+                <el-button
+                  type="text"
+                  class="copy-btn"
+                  @click="getLinkQrcode(row)"
+                >下载去重二维码</el-button>
               </div>
             </template>
           </el-table-column>
