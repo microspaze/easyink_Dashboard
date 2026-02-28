@@ -229,7 +229,7 @@ export default {
               }
             }
           });
-          copyText(resp.wxappLink);
+          copyText(resp.wxappUrl);
         }
         this.loading = false;
       }).catch(() => {
