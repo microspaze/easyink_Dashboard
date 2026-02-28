@@ -198,12 +198,38 @@ export default {
             if (item.id === row.id) {
               item.appLink = resp.data;
               item.appQrcode = resp.qrcode;
+              item.wxappLink = resp.wxappUrl;
               if (item.appQrcode) {
                 item.qrCode = item.appQrcode;
               }
             }
           });
           copyText(resp.data);
+        }
+        this.loading = false;
+      }).catch(() => {
+        this.loading = false;
+      });
+    },
+    getWxappLink(row) {
+      if (row.wxappLink) {
+        copyText(row.wxappLink);
+        return;
+      }
+      this.loading = true;
+      getApplink({ id: row.id, qrcode: row.qrCode }).then(resp => {
+        if (resp.data) {
+          this.list.forEach(item => {
+            if (item.id === row.id) {
+              item.appLink = resp.data;
+              item.appQrcode = resp.qrcode;
+              item.wxappLink = resp.wxappUrl;
+              if (item.appQrcode) {
+                item.qrCode = item.appQrcode;
+              }
+            }
+          });
+          copyText(resp.wxappLink);
         }
         this.loading = false;
       }).catch(() => {
@@ -380,13 +406,18 @@ export default {
                 <el-button
                   type="text"
                   class="copy-btn"
+                  @click="getWxappLink(row)"
+                >复制小程序去重链接</el-button>
+                <el-button
+                  type="text"
+                  class="copy-btn"
                   @click="getLink(row)"
-                >复制去重链接</el-button>
+                >复制H5去重链接</el-button>
                 <el-button
                   type="text"
                   class="copy-btn"
                   @click="getLinkQrcode(row)"
-                >下载去重二维码</el-button>
+                >下载H5去重二维码</el-button>
               </div>
             </template>
           </el-table-column>
