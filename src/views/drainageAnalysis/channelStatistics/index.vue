@@ -67,6 +67,11 @@
             />
           </el-form-item>
           <el-form-item>
+            <el-select v-model="query.lossType" placeholder="请选择流失类型">
+              <el-option v-for="item in lossTypeOptions" :key="item.value" :label="item.label" :value="item.value" />
+            </el-select>
+          </el-form-item>
+          <el-form-item>
             <el-button
               v-preventReClick="200"
               type="primary"
@@ -202,7 +207,14 @@ import UserItem from '@/components/UserItem.vue';
 import TagUserShow from '@/components/TagUserShow';
 import SelectChannel from './components/SelectChannel.vue';
 import SelectUser from '@/components/SelectUser/index.vue';
-import { TODAY_TIME, FIXED_DAYS_AGO_TIME, ONE_MOUNTH_AGO, ONE_MOUNTH_LATER, groupByScopeType } from '@/utils/common';
+import {
+  TODAY_TIME,
+  FIXED_DAYS_AGO_TIME,
+  ONE_MOUNTH_AGO,
+  ONE_MOUNTH_LATER,
+  groupByScopeType,
+  LOSS_IN_ALL_TIME, LOSS_IN_ONE_DAY, LOSS_IN_TWO_DAYS
+} from '@/utils/common';
 import {
   exportStatisticsByDate,
   exportStatisticsByStaff,
@@ -246,10 +258,25 @@ export default {
       },
       // 日期范围
       dateRange: [TODAY_TIME, TODAY_TIME],
+      lossTypeOptions: [
+        {
+          value: LOSS_IN_ALL_TIME,
+          label: '所有流失量'
+        },
+        {
+          value: LOSS_IN_ONE_DAY,
+          label: '24小时流失'
+        },
+        {
+          value: LOSS_IN_TWO_DAYS,
+          label: '48小时流失'
+        }
+      ],
       // 查询参数
       query: {
         departmentIds: [], // 部门id列表
         userIds: [], // 用户id列表
+        lossType: LOSS_IN_ALL_TIME,
         beginDate: undefined,
         endDate: undefined
       },
