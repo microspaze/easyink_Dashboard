@@ -178,7 +178,7 @@
 
     .sidebar-container {
       transition: transform 0.28s;
-      width: variables.$sideBarWidth !important;
+      max-width: variables.$sideBarWidth !important;
     }
 
     &.hideSidebar {
