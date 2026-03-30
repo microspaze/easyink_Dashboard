@@ -15,7 +15,7 @@
 
   .sidebar-container {
     transition: width 0.28s;
-    width: variables.$sideBarWidth !important;
+    max-width: variables.$sideBarWidth !important;
     background-color: variables.$menuBg;
     font-size: 0px;
     bottom: 0;
