@@ -100,6 +100,7 @@
                     <p>留存客户总数：截止到查询时间，未将员工删除的客户数</p>
                     <p>重复客户数：查询时间内，重复添加客户数</p>
                     <p>新增客户数：查询时间内，通过渠道添加员工的客户数，包含流失客户</p>
+                    <p>新客流失数：查询时间内，新增客户把员工删除的客户数</p>
                     <p>流失客户数：查询时间内，把员工删除的客户数</p>
                     <p>24小时流失数：查询时间内，24小时内把员工删除的客户总数</p>
                     <p>48小时流失数：查询时间内，48小时内把员工删除的客户总数</p>
@@ -176,6 +177,7 @@
             <el-table-column prop="accumulateCustomerCnt" label="累计添加客户" min-width="180" />
             <el-table-column prop="retainCustomerCnt" label="留存客户总数" min-width="180" />
             <el-table-column prop="newCustomerCnt" label="新增客户数" min-width="180" />
+            <el-table-column prop="lossNewCustomerCnt" label="新客流失数" min-width="180" />
             <el-table-column prop="lossCustomerCnt" label="流失客户数" min-width="180" />
             <el-table-column prop="loss24hCustomerCnt" label="24小时流失数" min-width="180" />
             <el-table-column prop="loss48hCustomerCnt" label="48小时流失数" min-width="180" />
@@ -291,6 +293,11 @@ export default {
           newCustomerCnt: 0,
           title: '新增客户数',
           filed: 'newCustomerCnt'
+        },
+        {
+          newCustomerCnt: 0,
+          title: '新客流失数',
+          filed: 'lossNewCustomerCnt'
         },
         {
           lossCustomerCnt: 0,
