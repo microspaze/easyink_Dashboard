@@ -12,11 +12,6 @@ import { groupBy, isEqual } from 'lodash';
 import moment from 'moment';
 const baseURL = process.env.VUE_APP_BASE_API;
 const TIME_LENGTH = 10;
-/** 流失类型 */
-export const LOSS_IN_ALL_TIME = 0;
-export const LOSS_IN_ONE_DAY = 24;
-export const LOSS_IN_TWO_DAYS = 48;
-
 /** 今天 */
 export const TODAY_TIME = moment().format('YYYY-MM-DD');
 // 昨天
