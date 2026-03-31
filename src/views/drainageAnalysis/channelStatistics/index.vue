@@ -177,6 +177,7 @@
             <el-table-column prop="accumulateCustomerCnt" label="累计添加客户" min-width="180" />
             <el-table-column prop="retainCustomerCnt" label="留存客户总数" min-width="180" />
             <el-table-column prop="newCustomerCnt" label="新增客户数" min-width="180" />
+            <el-table-column prop="lossNewCustomerCnt" label="新客流失数" min-width="180" />
             <el-table-column prop="lossCustomerCnt" label="流失客户数" min-width="180" />
             <el-table-column prop="loss24hCustomerCnt" label="24小时流失数" min-width="180" />
             <el-table-column prop="loss48hCustomerCnt" label="48小时流失数" min-width="180" />
