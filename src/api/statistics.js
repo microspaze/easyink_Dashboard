@@ -305,3 +305,22 @@ export function exportStatisticsByDate(data) {
     data
   });
 }
+
+/** 广告统计数据总览 */
+export function getAdvertTotal(data) {
+  return request({
+    url: service + '/advert/total',
+    method: 'post',
+    data
+  });
+}
+
+/** 广告统计-渠道维度 */
+export function getAdvertChannelList(data, params) {
+  return request({
+    url: service + '/advert/channel/list',
+    method: 'post',
+    data,
+    params
+  });
+}
