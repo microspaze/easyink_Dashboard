@@ -20,6 +20,13 @@
       :confirm-selected-code-list="channelList"
       @success="selectedChannel"
     />
+    <!-- 列配置弹窗 -->
+    <ColumnConfigModal
+      :visible.sync="dialogVisibleColumnConfig"
+      :list="columnConfigList"
+      storage-key="channelStatisticsColumnConfig"
+      @confirm="handleColumnConfigConfirm"
+    />
     <RightContainer>
       <template v-slot:search>
         <el-form
@@ -84,10 +91,10 @@
         </el-form>
       </template>
       <template v-slot:data>
-        <div class="data-overview">
+        <div class="data-overview" @click="dialogVisibleColumnConfig = true">
           <Statistics
             title="数据总览"
-            :col-list="colList"
+            :col-list="filteredColList"
           >
             <template slot="operate">
               <el-popover
@@ -106,10 +113,6 @@
                     <p>48小时流失数：查询时间内，48小时内把员工删除的客户总数</p>
                     <p>新客留存率：截止当前，未将员工删除的新增客户/新增客户数</p>
                   </div>
-                  <!-- <div class="line" />
-                  <div class="notice">
-                    注意：今日统计数据将于1小时后更新，请耐心等待
-                  </div> -->
                 </div>
                 <div slot="reference" class="statistic theme-text-color">统计说明</div>
               </el-popover>
@@ -141,7 +144,7 @@
               <empty-default-icon :length="list.length" :text="showChooseCodeTips ? '请先选择渠道' : '暂无数据'" />
             </template>
             <el-table-column
-              v-if="dimensionType === STAFF_DIMENSION"
+              v-if="dimensionType === STAFF_DIMENSION && visibleColumns.includes('userName')"
               prop="userName"
               label="员工"
               min-width="200"
@@ -151,7 +154,7 @@
               </template>
             </el-table-column>
             <el-table-column
-              v-if="dimensionType === DATE_DIMENSION"
+              v-if="dimensionType === DATE_DIMENSION && visibleColumns.includes('time')"
               prop="time"
               label="日期"
               min-width="200"
@@ -161,7 +164,7 @@
               </template>
             </el-table-column>
             <el-table-column
-              v-if="dimensionType === CODE_DIMENSION"
+              v-if="dimensionType === CODE_DIMENSION && visibleColumns.includes('empleName')"
               prop="empleName"
               label="渠道"
               min-width="200"
@@ -174,14 +177,54 @@
                 </el-tooltip>
               </template>
             </el-table-column>
-            <el-table-column prop="accumulateCustomerCnt" label="累计添加客户" min-width="180" />
-            <el-table-column prop="retainCustomerCnt" label="留存客户总数" min-width="180" />
-            <el-table-column prop="newCustomerCnt" label="新增客户数" min-width="180" />
-            <el-table-column prop="lossNewCustomerCnt" label="新客流失数" min-width="180" />
-            <el-table-column prop="lossCustomerCnt" label="流失客户数" min-width="180" />
-            <el-table-column prop="loss24hCustomerCnt" label="24小时流失数" min-width="180" />
-            <el-table-column prop="loss48hCustomerCnt" label="48小时流失数" min-width="180" />
-            <el-table-column prop="retainNewCustomerRate" label="新客留存率" min-width="180">
+            <el-table-column
+              v-if="visibleColumns.includes('accumulateCustomerCnt')"
+              prop="accumulateCustomerCnt"
+              label="累计添加客户"
+              min-width="180"
+            />
+            <el-table-column
+              v-if="visibleColumns.includes('retainCustomerCnt')"
+              prop="retainCustomerCnt"
+              label="留存客户总数"
+              min-width="180"
+            />
+            <el-table-column
+              v-if="visibleColumns.includes('newCustomerCnt')"
+              prop="newCustomerCnt"
+              label="新增客户数"
+              min-width="180"
+            />
+            <el-table-column
+              v-if="visibleColumns.includes('lossNewCustomerCnt')"
+              prop="lossNewCustomerCnt"
+              label="新客流失数"
+              min-width="180"
+            />
+            <el-table-column
+              v-if="visibleColumns.includes('lossCustomerCnt')"
+              prop="lossCustomerCnt"
+              label="流失客户数"
+              min-width="180"
+            />
+            <el-table-column
+              v-if="visibleColumns.includes('loss24hCustomerCnt')"
+              prop="loss24hCustomerCnt"
+              label="24小时流失数"
+              min-width="180"
+            />
+            <el-table-column
+              v-if="visibleColumns.includes('loss48hCustomerCnt')"
+              prop="loss48hCustomerCnt"
+              label="48小时流失数"
+              min-width="180"
+            />
+            <el-table-column
+              v-if="visibleColumns.includes('retainNewCustomerRate')"
+              prop="retainNewCustomerRate"
+              label="新客留存率"
+              min-width="180"
+            >
               <template #default="{ row }">
                 {{ row.retainNewCustomerRate === DATA_STATISTICS_DEFAULT_SHOW ? DATA_STATISTICS_DEFAULT_SHOW : row.retainNewCustomerRate + '%' }}
               </template>
@@ -208,6 +251,7 @@ import UserItem from '@/components/UserItem.vue';
 import TagUserShow from '@/components/TagUserShow';
 import SelectChannel from './components/SelectChannel.vue';
 import SelectUser from '@/components/SelectUser/index.vue';
+import ColumnConfigModal from '../components/ColumnConfigModal.vue';
 import { TODAY_TIME, FIXED_DAYS_AGO_TIME, ONE_MOUNTH_AGO, ONE_MOUNTH_LATER, groupByScopeType } from '@/utils/common';
 import {
   exportStatisticsByDate,
@@ -219,9 +263,10 @@ import {
   emplecodeByCode
 } from '@/api/statistics';
 import loadingMixin from '@/mixin/loadingMixin';
+import store from '@/store';
 export default {
   name: '',
-  components: { RightContainer, Statistics, EmptyDefaultIcon, UserItem, TagUserShow, SelectUser, SelectChannel },
+  components: { RightContainer, Statistics, EmptyDefaultIcon, UserItem, TagUserShow, SelectUser, SelectChannel, ColumnConfigModal },
   mixins: [loadingMixin],
   data() {
     return {
@@ -295,7 +340,7 @@ export default {
           filed: 'newCustomerCnt'
         },
         {
-          newCustomerCnt: 0,
+          lossNewCustomerCnt: 0,
           title: '新客流失数',
           filed: 'lossNewCustomerCnt'
         },
@@ -321,14 +366,63 @@ export default {
           filed: 'retainNewCustomerRate'
         }
       ],
+      // 列配置列表
+      columnConfigList: [
+        { title: '累计添加客户', filed: 'accumulateCustomerCnt' },
+        { title: '留存客户总数', filed: 'retainCustomerCnt' },
+        { title: '重复客户数', filed: 'duplicateCustomerCnt' },
+        { title: '新增客户数', filed: 'newCustomerCnt' },
+        { title: '新客流失数', filed: 'lossNewCustomerCnt' },
+        { title: '流失客户数', filed: 'lossCustomerCnt' },
+        { title: '24小时流失数', filed: 'loss24hCustomerCnt' },
+        { title: '48小时流失数', filed: 'loss48hCustomerCnt' },
+        { title: '新客留存率', filed: 'retainNewCustomerRate' }
+      ],
+      // 当前可见的列
+      visibleColumns: [],
       dimensionType: CODE_DIMENSION,
       dialogVisibleSelectChannel: false,
+      dialogVisibleColumnConfig: false,
       // 搜索框选择的渠道
       channelList: [],
       showChooseCodeTips: true
     };
   },
+  computed: {
+    // 根据visibleColumns过滤后的总览数据
+    filteredColList() {
+      return this.colList.filter(item => this.visibleColumns.includes(item.filed));
+    }
+  },
+  mounted() {
+    this.initVisibleColumns();
+  },
   methods: {
+    /**
+     * @description 初始化可见列
+     */
+    initVisibleColumns() {
+      // 从localStorage加载保存的配置
+      const savedConfig = window.localStorage.getItem(`channelStatisticsColumnConfig-${store.getters.corpId}`);
+      if (savedConfig && savedConfig !== '') {
+        try {
+          const config = JSON.parse(savedConfig);
+          this.visibleColumns = config.selected || this.columnConfigList.map(item => item.filed);
+        } catch (e) {
+          // 默认全部显示
+          this.visibleColumns = this.columnConfigList.map(item => item.filed);
+        }
+      } else {
+        // 默认全部显示
+        this.visibleColumns = this.columnConfigList.map(item => item.filed);
+      }
+    },
+    /**
+     * @description 列配置确认
+     */
+    handleColumnConfigConfirm(selectedFields) {
+      this.visibleColumns = selectedFields;
+    },
     /**
      * 切换维度查询
      */
@@ -465,12 +559,41 @@ export default {
       if (!this.channelList.length) {
         return this.msgWarn('请先选择渠道');
       }
+      // 根据配置的显示列生成导出字段
+      const exportFieldsMap = {
+        accumulateCustomerCnt: '累计添加客户',
+        retainCustomerCnt: '留存客户总数',
+        duplicateCustomerCnt: '重复客户数',
+        newCustomerCnt: '新增客户数',
+        lossNewCustomerCnt: '新客流失数',
+        lossCustomerCnt: '流失客户数',
+        loss24hCustomerCnt: '24小时流失数',
+        loss48hCustomerCnt: '48小时流失数',
+        retainNewCustomerRate: '新客留存率'
+      };
+      // 根据维度添加额外的导出字段
+      if (this.dimensionType === CODE_DIMENSION) {
+        exportFieldsMap.empleName = '渠道';
+      } else if (this.dimensionType === STAFF_DIMENSION) {
+        exportFieldsMap.userName = '员工';
+      } else if (this.dimensionType === DATE_DIMENSION) {
+        exportFieldsMap.time = '日期';
+      }
+      // 只导出显示的列
+      const selectedFields = this.visibleColumns.map(field => exportFieldsMap[field]).filter(Boolean);
+      if (selectedFields.length === 0) {
+        return this.msgWarn('请至少选择一个导出列');
+      }
+      const payload = {
+        ...this.getSearchPayload(),
+        selectedFields
+      };
       const exportFnMap = {
         [DATE_DIMENSION]: exportStatisticsByDate,
         [STAFF_DIMENSION]: exportStatisticsByStaff,
         [CODE_DIMENSION]: exportStatisticsByCode
       };
-      exportFnMap[this.dimensionType](this.getSearchPayload()).then((res) => {
+      exportFnMap[this.dimensionType](payload).then((res) => {
         this.download(res.data.msg, true);
       }).catch(() => {
         this.msgError('导出失败!');
@@ -496,6 +619,7 @@ export default {
     width: 100%;
     background-color: #fff;
     margin-bottom: 10px;
+    cursor: pointer;
   }
   .table-overview {
     padding: 15px;
@@ -523,11 +647,6 @@ export default {
       flex-direction: column;
     }
   }
-  .statistic {
-    width: 60px;
-    font-size: 14px;
-    cursor: default;
-  }
   .popover-content {
     width: 390px;
     font-size: 12px;
@@ -547,5 +666,9 @@ export default {
       height: 32px;
       color: #606266;
     }
+  }
+  .statistic {
+    font-size: 14px;
+    cursor: default;
   }
 </style>
