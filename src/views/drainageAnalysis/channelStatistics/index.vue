@@ -91,7 +91,7 @@
         </el-form>
       </template>
       <template v-slot:data>
-        <div class="data-overview" @click="dialogVisibleColumnConfig = true">
+        <div class="data-overview">
           <Statistics
             title="数据总览"
             :col-list="filteredColList"
@@ -114,7 +114,7 @@
                     <p>新客留存率：截止当前，未将员工删除的新增客户/新增客户数</p>
                   </div>
                 </div>
-                <div slot="reference" class="statistic theme-text-color">统计说明</div>
+                <div slot="reference" class="statistic theme-text-color" @click="dialogVisibleColumnConfig = true">统计说明</div>
               </el-popover>
             </template>
           </Statistics>
