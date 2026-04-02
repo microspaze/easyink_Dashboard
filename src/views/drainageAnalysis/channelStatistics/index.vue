@@ -144,7 +144,7 @@
               <empty-default-icon :length="list.length" :text="showChooseCodeTips ? '请先选择渠道' : '暂无数据'" />
             </template>
             <el-table-column
-              v-if="dimensionType === STAFF_DIMENSION && visibleColumns.includes('userName')"
+              v-if="dimensionType === STAFF_DIMENSION"
               prop="userName"
               label="员工"
               min-width="200"
@@ -154,7 +154,7 @@
               </template>
             </el-table-column>
             <el-table-column
-              v-if="dimensionType === DATE_DIMENSION && visibleColumns.includes('time')"
+              v-if="dimensionType === DATE_DIMENSION"
               prop="time"
               label="日期"
               min-width="200"
@@ -164,7 +164,7 @@
               </template>
             </el-table-column>
             <el-table-column
-              v-if="dimensionType === CODE_DIMENSION && visibleColumns.includes('empleName')"
+              v-if="dimensionType === CODE_DIMENSION"
               prop="empleName"
               label="渠道"
               min-width="200"
